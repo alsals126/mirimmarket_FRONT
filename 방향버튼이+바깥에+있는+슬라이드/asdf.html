@@ -1,0 +1,293 @@
+<style>
+    /* 리셋 CSS */
+    * {margin:0;padding:0;box-sizing:border-box;}
+    ul, li {list-style:none;}
+    
+    
+    .slidebox {max-width:1300px;margin: auto;position:relative;}
+    .slidebox .slidelist {position:relative;white-space:nowrap;font-size:0;overflow:hidden;}
+    .slidebox .slidelist .slideitem {position:relative;display:inline-block;vertical-align:middle;width:100%;transition:all 1s;}
+    .slidebox .slidelist .slideitem > a {display:block;width:auto;position:relative;}
+    .slidebox .slidelist .slideitem > a img {max-width:100%;}
+    
+    .slidebox .slide-control [class*="control"] label {position:absolute;top:50%;transform:translateY(-50%);padding:70px;cursor:pointer;}
+    .slidebox .slide-control [class*="control"] label.prev {left:-130px;background: url('./img/left-arrow.png') center center / 50% no-repeat;}
+    .slidebox .slide-control [class*="control"] label.next {right:-130px;background: url('./img/right-arrow.png') center center / 50% no-repeat;}
+    
+    [name="slide"] {display:none;}
+    #slide01:checked ~ .slidelist .slideitem {left:0;}
+    #slide02:checked ~ .slidelist .slideitem {left:-100%;}
+    #slide03:checked ~ .slidelist .slideitem {left:-200%;}
+    #slide04:checked ~ .slidelist .slideitem {left:-300%;}
+    
+    .slide-control [class*="control"] {display:none;}
+    #slide01:checked ~ .slide-control .control01 {display:block;}
+    #slide02:checked ~ .slide-control .control02 {display:block;}
+    #slide03:checked ~ .slide-control .control03 {display:block;}
+    #slide04:checked ~ .slide-control .control04 {display:block;}
+
+
+
+
+
+
+    @font-face {
+    font-family: 'TmoneyRoundWind';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    #__x {
+		left: 363px;
+		top: 1210px;
+		position: absolute;
+		overflow: visible;
+		width: 78px;
+		white-space: nowrap;
+		line-height: 30px;
+		margin-top: -6px;
+		text-align: left;
+		font-family: 'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(69,69,69,1);
+	}
+#ID20000 {
+		left: 363px;
+		top: 1238px;
+		position: absolute;
+		overflow: visible;
+		width: 91px;
+		white-space: nowrap;
+		line-height: 30px;
+		margin-top: -2px;
+		text-align: left;
+		font-family: 'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		color: rgba(69,69,69,1);
+	}
+#_c {
+		opacity: 0.4;
+		left: 689px;
+		top: 1233px;
+		position: absolute;
+		overflow: visible;
+		width: 53px;
+		white-space: nowrap;
+		line-height: 30px;
+		margin-top: -8px;
+		text-align: right;
+		font-family: 'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(69,69,69,1);
+	}
+#__bc {
+		left: 597px;
+		top: 1254px;
+		position: absolute;
+		overflow: visible;
+		width: 50px;
+		white-space: nowrap;
+		line-height: 30px;
+		margin-top: -8px;
+		text-align: right;
+		font-family: 'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(69,69,69,1);
+	}
+#_12 {
+	fill: rgba(102,140,74,1);
+}
+._12 {
+		position: absolute;
+		overflow: visible;
+		width: 15px;
+		height: 15px;
+		top: 1256px;
+}
+#_13 {
+		fill: rgba(102,140,74,1);
+	}
+._13 {
+		position: absolute;
+		overflow: visible;
+		width: 15px;
+		height: 15px;
+		left: 669px;
+		top: 1256px;
+	}
+#_14 {
+		fill: rgba(102,140,74,1);
+	}
+._14 {
+		position: absolute;
+		overflow: visible;
+		width: 15px;
+		height: 15px;
+		left: 688px;
+		top: 1256px;
+	}
+#_15 {
+		fill: rgba(102,140,74,1);
+	}
+._15 {
+		position: absolute;
+		overflow: visible;
+		width: 15px;
+		height: 15px;
+		left: 707px;
+		top: 1256px;
+	}
+#_16 {
+		opacity: 0.2;
+		fill: transparent;
+		stroke: rgba(0,0,0,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+._16 {
+		position: absolute;
+		overflow: visible;
+		width: 15px;
+		height: 15px;
+		left: 726px;
+		top: 1256px;
+	}
+#_21_dv {
+		position: absolute;
+		width: 378px;
+		height: 320px;
+		left: 363px;
+		top: 878px;
+		overflow: hidden;
+	}
+img #productIMG{
+    position: absolute;
+	overflow: visible;
+	width: 378px;
+	height: 320px;
+	left: 0px;
+	top: 0px;   
+}
+/*
+#_18_dw {
+		fill: rgba(102,140,74,1);
+	}
+._18_dw {
+		position: absolute;
+		overflow: visible;
+		width: 378px;
+		height: 320px;
+		left: 0px;
+		top: 0px;
+	}
+#No_Image {
+		left: 159px;
+		top: 150px;
+		position: absolute;
+		overflow: visible;
+		width: 62px;
+		white-space: nowrap;
+		line-height: 30px;
+		margin-top: -8px;
+		text-align: right;
+		font-family: 'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+	}*/
+    </style>
+
+    <script>
+		function state(){
+			const maxState = 5;
+			var position = 650;
+			var state = 4;
+			for(var i=1; i<=state; i++){
+				document.write(
+					'<svg class="_12" style="left: '+ position + 'px;"> <ellipse id="_12" rx="7.5" ry="7.5" cx="7.5" cy="7.5"/> </svg>'
+				);
+				position += 19;
+			}
+
+			for(var i=state; i<maxState; i++){
+				document.write(
+					'<svg class="_16" style="left: '+ position + 'px;"> <ellipse id="_16" rx="7.5" ry="7.5" cx="7.5" cy="7.5"/> </svg>'
+				);
+				position += 19;
+			}
+		}
+    </script>
+    
+    
+    <div class="slidebox">
+        <input type="radio" name="slide" id="slide01" checked>
+        <input type="radio" name="slide" id="slide02">
+        <input type="radio" name="slide" id="slide03">
+        <input type="radio" name="slide" id="slide04">
+        <ul class="slidelist">
+            <li class="slideitem">
+                <a><img src="./img/slide01.jpg"></a>
+            </li>
+            <li class="slideitem">
+                <a><img src="./img/slide02.jpg"></a>
+            </li>
+            <li class="slideitem">
+                <a><img src="./img/slide03.jpg"></a>
+            </li>
+            <li class="slideitem">
+                <a><img src="./img/slide04.jpg"></a>
+            </li>
+            
+        </ul>
+        
+        </svg>
+        <div class="slide-control">
+            <div class="control01">
+                <label for="slide04" class="prev"></label>
+                <label for="slide02" class="next"></label>
+            </div>
+            <div class="control02">
+                <label for="slide01" class="prev"></label>
+                <label for="slide03" class="next"></label>
+            </div>
+            <div class="control03">
+                <label for="slide02" class="prev"></label>
+                <label for="slide04" class="next"></label>
+            </div>
+            <div class="control04">
+                <label for="slide03" class="prev"></label>
+                <label for="slide01" class="next"></label>
+            </div>
+        </div>
+    </div>
+
+    <div id="_21_dv">
+        <img id="productIMG" src="puppy.jpg" onerror="this.src = 'noimage.PNG'"/>
+    </div>
+    <div id="__x">
+        <span>교복 마이</span>
+    </div>
+    <div id="ID20000">
+        <span>20,000</span><span style="font-size:14px;">원</span>
+    </div>
+    <div id="_c">
+        <span>옷>교복</span>
+    </div>
+    <div id="__bc">
+        <span>상태: 상</span>
+    </div>
+	
+	<script> state()</script>
