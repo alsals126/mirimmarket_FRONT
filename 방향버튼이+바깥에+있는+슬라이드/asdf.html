@@ -4,15 +4,15 @@
     ul, li {list-style:none;}
     
     
-    .slidebox {max-width:1300px;margin: auto;position:relative;}
+    .slidebox {max-width:1200px;margin: auto;position:relative;}
     .slidebox .slidelist {position:relative;white-space:nowrap;font-size:0;overflow:hidden;}
-    .slidebox .slidelist .slideitem {position:relative;display:inline-block;vertical-align:middle;width:100%;transition:all 1s;}
+    .slidebox .slidelist .slideitem {position:relative; display:inline-block;vertical-align:top; top:150px; width:100%;transition:all 1s;}
     .slidebox .slidelist .slideitem > a {display:block;width:auto;position:relative;}
-    .slidebox .slidelist .slideitem > a img {max-width:100%;}
+    .slidebox .slidelist .slideitem > a img {}
     
     .slidebox .slide-control [class*="control"] label {position:absolute;top:50%;transform:translateY(-50%);padding:70px;cursor:pointer;}
-    .slidebox .slide-control [class*="control"] label.prev {left:-130px;background: url('./img/left-arrow.png') center center / 50% no-repeat;}
-    .slidebox .slide-control [class*="control"] label.next {right:-130px;background: url('./img/right-arrow.png') center center / 50% no-repeat;}
+    .slidebox .slide-control [class*="control"] label.prev {left:-120px;background: url('./img/left-arrow.png') center center / 50% no-repeat;}
+    .slidebox .slide-control [class*="control"] label.next {right:-120px;background: url('./img/right-arrow.png') center center / 50% no-repeat;}
     
     [name="slide"] {display:none;}
     #slide01:checked ~ .slidelist .slideitem {left:0;}
@@ -32,18 +32,39 @@
 
 
     @font-face {
-    font-family: 'TmoneyRoundWind';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+		font-family: 'TmoneyRoundWind';
+		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
 
-    #__x {
+	#product{
+		position: absolute;
+		width: 379px;
+		height: 394px;
+		/*
 		left: 363px;
-		top: 1210px;
+		top: 878px;*/
+		overflow: hidden;
+	}
+	#productIMGpos {
+		position: absolute;
+		width: 378px;
+		height: 320px;
+		overflow: hidden;
+	}
+	img #productIMG{
 		position: absolute;
 		overflow: visible;
-		width: 78px;
+		width: 378px;
+		height: 320px;
+		left: 0px;
+		top: 0px;   
+	}
+    #productName {
+		top: 332px;
+		position: absolute;
+		overflow: visible;
 		white-space: nowrap;
 		line-height: 30px;
 		margin-top: -6px;
@@ -54,12 +75,10 @@
 		font-size: 18px;
 		color: rgba(69,69,69,1);
 	}
-#ID20000 {
-		left: 363px;
-		top: 1238px;
+	#productPrice {
+		top: 360px;
 		position: absolute;
 		overflow: visible;
-		width: 91px;
 		white-space: nowrap;
 		line-height: 30px;
 		margin-top: -2px;
@@ -70,13 +89,12 @@
 		font-size: 26px;
 		color: rgba(69,69,69,1);
 	}
-#_c {
+	#productCategory {
 		opacity: 0.4;
-		left: 689px;
-		top: 1233px;
+		right: 0px;
+		top: 355px;
 		position: absolute;
 		overflow: visible;
-		width: 53px;
 		white-space: nowrap;
 		line-height: 30px;
 		margin-top: -8px;
@@ -87,12 +105,11 @@
 		font-size: 14px;
 		color: rgba(69,69,69,1);
 	}
-#__bc {
-		left: 597px;
-		top: 1254px;
+	#productState {
+		left: 234px;
+		top: 375px;
 		position: absolute;
 		overflow: visible;
-		width: 50px;
 		white-space: nowrap;
 		line-height: 30px;
 		margin-top: -8px;
@@ -103,50 +120,17 @@
 		font-size: 14px;
 		color: rgba(69,69,69,1);
 	}
-#_12 {
-	fill: rgba(102,140,74,1);
-}
-._12 {
-		position: absolute;
-		overflow: visible;
-		width: 15px;
-		height: 15px;
-		top: 1256px;
-}
-#_13 {
+	#productStateFill {
 		fill: rgba(102,140,74,1);
 	}
-._13 {
+	.productStateFill {
 		position: absolute;
 		overflow: visible;
 		width: 15px;
 		height: 15px;
-		left: 669px;
-		top: 1256px;
+		top: 377px;
 	}
-#_14 {
-		fill: rgba(102,140,74,1);
-	}
-._14 {
-		position: absolute;
-		overflow: visible;
-		width: 15px;
-		height: 15px;
-		left: 688px;
-		top: 1256px;
-	}
-#_15 {
-		fill: rgba(102,140,74,1);
-	}
-._15 {
-		position: absolute;
-		overflow: visible;
-		width: 15px;
-		height: 15px;
-		left: 707px;
-		top: 1256px;
-	}
-#_16 {
+	#productStateNoneFill {
 		opacity: 0.2;
 		fill: transparent;
 		stroke: rgba(0,0,0,1);
@@ -156,80 +140,35 @@
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-._16 {
+	.productStateNoneFill {
 		position: absolute;
 		overflow: visible;
 		width: 15px;
 		height: 15px;
-		left: 726px;
-		top: 1256px;
+		top: 378px;
 	}
-#_21_dv {
-		position: absolute;
-		width: 378px;
-		height: 320px;
-		left: 363px;
-		top: 878px;
-		overflow: hidden;
-	}
-img #productIMG{
-    position: absolute;
-	overflow: visible;
-	width: 378px;
-	height: 320px;
-	left: 0px;
-	top: 0px;   
-}
-/*
-#_18_dw {
-		fill: rgba(102,140,74,1);
-	}
-._18_dw {
-		position: absolute;
-		overflow: visible;
-		width: 378px;
-		height: 320px;
-		left: 0px;
-		top: 0px;
-	}
-#No_Image {
-		left: 159px;
-		top: 150px;
-		position: absolute;
-		overflow: visible;
-		width: 62px;
-		white-space: nowrap;
-		line-height: 30px;
-		margin-top: -8px;
-		text-align: right;
-		font-family: 'TmoneyRoundWind';
-		font-style: normal;
-		font-weight: normal;
-		font-size: 14px;
-		color: rgba(255,255,255,1);
-	}*/
-    </style>
+</style>
 
-    <script>
-		function state(){
-			const maxState = 5;
-			var position = 650;
-			var state = 4;
-			for(var i=1; i<=state; i++){
-				document.write(
-					'<svg class="_12" style="left: '+ position + 'px;"> <ellipse id="_12" rx="7.5" ry="7.5" cx="7.5" cy="7.5"/> </svg>'
-				);
-				position += 19;
-			}
-
-			for(var i=state; i<maxState; i++){
-				document.write(
-					'<svg class="_16" style="left: '+ position + 'px;"> <ellipse id="_16" rx="7.5" ry="7.5" cx="7.5" cy="7.5"/> </svg>'
-				);
-				position += 19;
-			}
+<script>
+	function state(){
+		const maxState = 5;
+		var position = 287;
+		var state = 4;
+		for(var i=1; i<=state; i++){
+			document.write(
+				'<svg class="productStateFill" style="left: '+ position + 'px;"> <ellipse id="productStateFill" rx="7.5" ry="7.5" cx="7.5" cy="7.5"/> </svg>'
+			);
+			position += 19;
 		}
-    </script>
+
+		for(var i=state; i<maxState; i++){
+			document.write(
+				'<svg class="productStateNoneFill" style="left: '+ position + 'px;"> <ellipse id="productStateNoneFill" rx="7.5" ry="7.5" cx="7.5" cy="7.5"/> </svg>'
+			);
+			position += 19;
+		}
+	}
+</script>
     
     
     <div class="slidebox">
@@ -239,7 +178,26 @@ img #productIMG{
         <input type="radio" name="slide" id="slide04">
         <ul class="slidelist">
             <li class="slideitem">
-                <a><img src="./img/slide01.jpg"></a>
+				<a>
+                <div id="product">
+					<div id="productIMGpos">
+						<img id="productIMG" src="puppy.jpg" onerror="this.src = 'noimage.PNG'"/>
+					</div>
+					<div id="productName">
+						<span>교복 마이</span>
+					</div>
+					<div id="productPrice">
+						<span>20,000</span><span style="font-size:14px;">원</span>
+					</div>
+					<div id="productCategory">
+						<span>옷>교복</span>
+					</div>
+					<div id="productState">
+						<span>상태: 상</span>
+					</div>
+					<script> state()</script>
+				</div>
+			</a>
             </li>
             <li class="slideitem">
                 <a><img src="./img/slide02.jpg"></a>
@@ -273,21 +231,23 @@ img #productIMG{
             </div>
         </div>
     </div>
-
-    <div id="_21_dv">
-        <img id="productIMG" src="puppy.jpg" onerror="this.src = 'noimage.PNG'"/>
-    </div>
-    <div id="__x">
-        <span>교복 마이</span>
-    </div>
-    <div id="ID20000">
-        <span>20,000</span><span style="font-size:14px;">원</span>
-    </div>
-    <div id="_c">
-        <span>옷>교복</span>
-    </div>
-    <div id="__bc">
-        <span>상태: 상</span>
-    </div>
-	
-	<script> state()</script>
+	<!--
+	<div id="product">
+		<div id="productIMGpos">
+			<img id="productIMG" src="puppy.jpg" onerror="this.src = 'noimage.PNG'"/>
+		</div>
+		<div id="productName">
+			<span>교복 마이</span>
+		</div>
+		<div id="productPrice">
+			<span>20,000</span><span style="font-size:14px;">원</span>
+		</div>
+		<div id="productCategory">
+			<span>옷>교복</span>
+		</div>
+		<div id="productState">
+			<span>상태: 상</span>
+		</div>
+		<script> state()</script>
+	</div>	
+	-->
