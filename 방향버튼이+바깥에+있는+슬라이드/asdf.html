@@ -4,10 +4,11 @@
     ul, li {list-style:none;}
     
     
-    .slidebox {max-width:1300px;margin: auto;position:relative;}
+    .slidebox {max-width:1300px;margin: auto;position:absolute; height: 395px;
+    top: 878px; left:242px;}
     .slidebox .slidelist {position:relative;margin: auto 20px;white-space:nowrap;font-size:0;overflow:hidden; text-align:center;}
-    .slidebox .slidelist .slideitem {position:relative; display:inline-block;vertical-align:top; top:150px; width:100%;transition:all 1s;}
-    .slidebox .slidelist .slideitem > a {display:block;width:auto; left:35px; position:relative;}
+    .slidebox .slidelist .slideitem {position:relative; display:inline-block;vertical-align:top;width:100%;transition:all 1s;}
+    .slidebox .slidelist .slideitem > a {display:block;width:auto;  position:relative; left: 16px;}
     
     .slidebox .slide-control [class*="control"] label {position:absolute;top:50%;transform:translateY(-50%);padding:70px;cursor:pointer;}
     .slidebox .slide-control [class*="control"] label.prev {left:-120px;background: url('./img/left-arrow.png') center center / 50% no-repeat;}
@@ -17,19 +18,14 @@
     #slide01:checked ~ .slidelist .slideitem {left:0;}
     #slide02:checked ~ .slidelist .slideitem {left:-100%;}
     #slide03:checked ~ .slidelist .slideitem {left:-200%;}
-    #slide04:checked ~ .slidelist .slideitem {left:-300%;}
+    /*#slide04:checked ~ .slidelist .slideitem {left:-300%;}*/
     
     .slide-control [class*="control"] {display:none;}
     #slide01:checked ~ .slide-control .control01 {display:block;}
     #slide02:checked ~ .slide-control .control02 {display:block;}
     #slide03:checked ~ .slide-control .control03 {display:block;}
-    #slide04:checked ~ .slide-control .control04 {display:block;}
-
-
-
-
-
-
+    /*#slide04:checked ~ .slide-control .control04 {display:block;}*/
+	
     @font-face {
 		font-family: 'TmoneyRoundWind';
 		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
@@ -38,7 +34,9 @@
 	}
 
 	#product{
-		position: absolute;
+		position: relative;
+		float: left;
+		margin: auto 15px;
 		width: 379px;
 		height: 394px;
 		overflow: hidden;
@@ -150,7 +148,7 @@
 	function state(){
 		const maxState = 5;
 		var position = 287;
-		var state = 4;
+		var state = 3;
 		for(var i=1; i<=state; i++){
 			document.write(
 				'<svg class="productStateFill" style="left: '+ position + 'px;"> <ellipse id="productStateFill" rx="7.5" ry="7.5" cx="7.5" cy="7.5"/> </svg>'
@@ -195,8 +193,8 @@
 						<script> state()</script>
 					</div>
 				</a>
-				<a>
-					<div id="product" style="left: 408px;">
+				<a style>
+					<div id="product">
 						<div id="productIMGpos">
 							<img id="productIMG" src="puppy.jpg" onerror="this.src = 'noimage.PNG'"/>
 						</div>
@@ -216,7 +214,7 @@
 					</div>
 				</a>
 				<a>
-					<div id="product" style="left: 816px;">
+					<div id="product">
 						<div id="productIMGpos">
 							<img id="productIMG" src="puppy.jpg" onerror="this.src = 'noimage.PNG'"/>
 						</div>
@@ -237,21 +235,202 @@
 				</a>
             </li>
             <li class="slideitem">
-                <a><img src="./img/slide02.jpg"></a>
+				<a>
+					<div id="product" onclick="">
+						<div id="productIMGpos">
+							<img id="productIMG" src="puppy.jpg" onerror="this.src = 'noimage.PNG'"/>
+						</div>
+						<div id="productName">
+							<span>교복 마이</span>
+						</div>
+						<div id="productPrice">
+							<span>20,000</span><span style="font-size:14px;">원</span>
+						</div>
+						<div id="productCategory">
+							<span>옷>교복</span>
+						</div>
+						<div id="productState">
+							<span>상태: 상</span>
+						</div>
+						<script> state()</script>
+					</div>
+				</a>
+				<a style>
+					<div id="product">
+						<div id="productIMGpos">
+							<img id="productIMG" src="puppy.jpg" onerror="this.src = 'noimage.PNG'"/>
+						</div>
+						<div id="productName">
+							<span>교복 마이</span>
+						</div>
+						<div id="productPrice">
+							<span>20,000</span><span style="font-size:14px;">원</span>
+						</div>
+						<div id="productCategory">
+							<span>옷>교복</span>
+						</div>
+						<div id="productState">
+							<span>상태: 상</span>
+						</div>
+						<script> state()</script>
+					</div>
+				</a>
+				<a>
+					<div id="product">
+						<div id="productIMGpos">
+							<img id="productIMG" src="puppy.jpg" onerror="this.src = 'noimage.PNG'"/>
+						</div>
+						<div id="productName">
+							<span>교복 마이</span>
+						</div>
+						<div id="productPrice">
+							<span>20,000</span><span style="font-size:14px;">원</span>
+						</div>
+						<div id="productCategory">
+							<span>옷>교복</span>
+						</div>
+						<div id="productState">
+							<span>상태: 상</span>
+						</div>
+						<script> state()</script>
+					</div>
+				</a>
             </li>
             <li class="slideitem">
-                <a><img src="./img/slide03.jpg"></a>
+				<a>
+					<div id="product" onclick="">
+						<div id="productIMGpos">
+							<img id="productIMG" src="puppy.jpg" onerror="this.src = 'noimage.PNG'"/>
+						</div>
+						<div id="productName">
+							<span>교복 마이</span>
+						</div>
+						<div id="productPrice">
+							<span>20,000</span><span style="font-size:14px;">원</span>
+						</div>
+						<div id="productCategory">
+							<span>옷>교복</span>
+						</div>
+						<div id="productState">
+							<span>상태: 상</span>
+						</div>
+						<script> state()</script>
+					</div>
+				</a>
+				<a style>
+					<div id="product">
+						<div id="productIMGpos">
+							<img id="productIMG" src="puppy.jpg" onerror="this.src = 'noimage.PNG'"/>
+						</div>
+						<div id="productName">
+							<span>교복 마이</span>
+						</div>
+						<div id="productPrice">
+							<span>20,000</span><span style="font-size:14px;">원</span>
+						</div>
+						<div id="productCategory">
+							<span>옷>교복</span>
+						</div>
+						<div id="productState">
+							<span>상태: 상</span>
+						</div>
+						<script> state()</script>
+					</div>
+				</a>
+				<a>
+					<div id="product">
+						<div id="productIMGpos">
+							<img id="productIMG" src="puppy.jpg" onerror="this.src = 'noimage.PNG'"/>
+						</div>
+						<div id="productName">
+							<span>교복 마이</span>
+						</div>
+						<div id="productPrice">
+							<span>20,000</span><span style="font-size:14px;">원</span>
+						</div>
+						<div id="productCategory">
+							<span>옷>교복</span>
+						</div>
+						<div id="productState">
+							<span>상태: 상</span>
+						</div>
+						<script> state()</script>
+					</div>
+				</a>
             </li>
-            <li class="slideitem">
+			<li class="slideitem">
+				<a>
+					<div id="product" onclick="">
+						<div id="productIMGpos">
+							<img id="productIMG" src="puppy.jpg" onerror="this.src = 'noimage.PNG'"/>
+						</div>
+						<div id="productName">
+							<span>교복 마이</span>
+						</div>
+						<div id="productPrice">
+							<span>20,000</span><span style="font-size:14px;">원</span>
+						</div>
+						<div id="productCategory">
+							<span>옷>교복</span>
+						</div>
+						<div id="productState">
+							<span>상태: 상</span>
+						</div>
+						<script> state()</script>
+					</div>
+				</a>
+				<a style>
+					<div id="product">
+						<div id="productIMGpos">
+							<img id="productIMG" src="puppy.jpg" onerror="this.src = 'noimage.PNG'"/>
+						</div>
+						<div id="productName">
+							<span>교복 마이</span>
+						</div>
+						<div id="productPrice">
+							<span>20,000</span><span style="font-size:14px;">원</span>
+						</div>
+						<div id="productCategory">
+							<span>옷>교복</span>
+						</div>
+						<div id="productState">
+							<span>상태: 상</span>
+						</div>
+						<script> state()</script>
+					</div>
+				</a>
+				<a>
+					<div id="product">
+						<div id="productIMGpos">
+							<img id="productIMG" src="puppy.jpg" onerror="this.src = 'noimage.PNG'"/>
+						</div>
+						<div id="productName">
+							<span>교복 마이</span>
+						</div>
+						<div id="productPrice">
+							<span>20,000</span><span style="font-size:14px;">원</span>
+						</div>
+						<div id="productCategory">
+							<span>옷>교복</span>
+						</div>
+						<div id="productState">
+							<span>상태: 상</span>
+						</div>
+						<script> state()</script>
+					</div>
+				</a>
+            </li>
+			<!--
+				<li class="slideitem">
                 <a><img src="./img/slide04.jpg"></a>
             </li>
-            
+			-->
         </ul>
         
         </svg>
         <div class="slide-control">
             <div class="control01">
-                <label for="slide04" class="prev"></label>
+                <label for="slide03" class="prev"></label>
                 <label for="slide02" class="next"></label>
             </div>
             <div class="control02">
@@ -260,12 +439,14 @@
             </div>
             <div class="control03">
                 <label for="slide02" class="prev"></label>
-                <label for="slide04" class="next"></label>
+                <label for="slide01" class="next"></label>
             </div>
+			<!--
             <div class="control04">
                 <label for="slide03" class="prev"></label>
                 <label for="slide01" class="next"></label>
             </div>
+			-->
         </div>
     </div>
 	<!--
