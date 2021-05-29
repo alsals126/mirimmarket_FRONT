@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>메뉴</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                font: 17px;
+            }
+            a{
+                text-decoration: none;
+                color: #404040;
+            }
+            li{
+                list-style: none;
+            }
+            #menu1{
+                background: cornflowerblue;
+            }
+            #menu1 ul{
+                width: 500px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            #menu1 ul li{
+                float: left;
+                width: 25%;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                background: chocolate;
+            }
+            #menu1 ul li a{
+                display: block;
+            }
+            #menu1 ul li a:hover{
+                background: darkblue;
+                color: darkorange;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="menu1">
+            <ul class="main">
+                <li><a href="#">1</a>
+                    <ul class="sub">
+                        <li><a href="#">a1</a></li>
+                        <li><a href="#">b1</a></li>
+                        <li><a href="#">c1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">2</a>
+                    <ul class="sub">
+                        <li><a href="#">a2</a></li>
+                        <li><a href="#">b2</a></li>
+                        <li><a href="#">c2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">3</a>
+                    <ul class="sub">
+                        <li><a href="#">a3</a></li>
+                        <li><a href="#">b3</a></li>
+                        <li><a href="#">c3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">4</a>
+                    <ul class="sub">
+                        <li><a href="#">a4</a></li>
+                        <li><a href="#">b4</a></li>
+                        <li><a href="#">c4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

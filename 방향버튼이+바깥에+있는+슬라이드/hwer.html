@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>메뉴</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                font: 17px;
+            }
+            a{
+                text-decoration: none;
+                color: #404040;
+            }
+            li{
+                list-style: none;
+            }
+            #menu1{
+                background: cornflowerblue;
+            }
+            #menu1 ul{
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            #menu1 ul li{
+                float: left;    
+                width: 25%;
+                line-height: 50px;
+                text-align: center;
+                background: chocolate;
+            }
+            #menu1 ul li a{
+                display: block;
+            }/*
+            #menu1 ul li a:hover{
+                background: darkblue;
+                color: darkorange;
+            }*/
+            #menu1 ul li:hover{
+                background: darkblue;
+                color: darkorange;
+            }
+            .menu2{
+                position: absolute;
+                top: 50px;
+                height: 500px;
+                width: 100%;
+                background: darkorchid;
+                display: none;
+            }
+            #menu1 ul li:hover + .menu2{
+                display: block;
+            }#menu1 ul li:hover + li + .menu2{
+                display: block;
+            }#menu1 ul li:hover + li + li + .menu2{
+                display: block;
+            }#menu1 ul li:hover + li + li + li + .menu2{
+                display: block;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="menu1">
+            <ul class="main">
+                <li>1</li>
+                <li><a href="#">2</a>
+                </li>
+                <li><a href="#">3</a>
+                </li>
+                <li><a href="#">4</a>
+                </li>
+                <div class="menu2">
+                    asdf
+                </div>
+            </ul>
+        </div>
+        
+    </body>
+</html>
