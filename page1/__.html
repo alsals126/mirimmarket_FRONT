@@ -7,7 +7,6 @@
 <title>메인</title>
 
 <link href="slider.css" rel="stylesheet" type="text/css" />
-<<<<<<< HEAD
 <script>
 	function state(){
 		const maxState = 5;
@@ -28,8 +27,6 @@
 		}
 	}
 </script>
-=======
->>>>>>> e66341d931dd4a97fe8704467071e87cbb9a8b03
 <style id="applicationStylesheet" type="text/css">
 	/*
 	.mediaViewInfo {
@@ -45,7 +42,7 @@
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-		border: none;
+		/*border: none;*/
 	}
 	@font-face {
     font-family: 'TmoneyRoundWind';
@@ -137,6 +134,7 @@
 		font-weight: normal;
 		font-size: 18px;
 		color: rgba(69,69,69,1);
+		cursor: pointer;
 	}	
 
 	#_11 {
@@ -1583,23 +1581,7 @@
 		font-weight: normal;
 		font-size: 26px;
 		color: rgba(69,69,69,1);
-	}/*
-	#____ {
-		left: 1138px;
-		top: 84.673px;
-		position: absolute;
-		overflow: visible;
-		width: 401px;
-		white-space: nowrap;
-		line-height: 30px;
-		margin-top: -2px;
-		text-align: right;
-		font-family: 'TmoneyRoundWind';
-		font-style: normal;
-		font-weight: normal;
-		font-size: 26px;
-		color: rgba(69,69,69,1);
-	}*/
+	}
 	#middleTIME {
 		position: absolute;
 		overflow: visible;
@@ -2952,61 +2934,50 @@
 		font-size: 14px;
 		color: rgba(255,255,255,1);
 	}
-	#_26_gp {
-		fill: rgba(255,255,255,1);
-		stroke: rgba(177,177,172,1);
-		stroke-width: 1px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	._26_gp {
+	select {
 		position: absolute;
-		overflow: visible;
-		width: 93px;
-		height: 30px;
 		left: 1464px;
 		top: 2240px;
+		width: 93px;
+		height: 33px;
+		padding: 0em .8em;	
+		appearance: none;-webkit-appearance: none;
+		background-color: rgb(255, 0, 0,0);
 	}
-	#_32_gq {
-		position: absolute;
-		width: 67px;
-		height: 21px;
-		left: 1477px;
-		top: 2244px;
-		overflow: visible;
-	}
-	#_gr {
-		left: 0px;
-		top: 0px;
-		position: absolute;
-		overflow: visible;
-		width: 49px;
-		white-space: nowrap;
-		line-height: 30px;
-		margin-top: -7px;
-		text-align: left;
+	.selectbox{		
 		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
+		color: rgb(69,69,69,1);
 		font-size: 16px;
-		color: rgba(69,69,69,1);
+		border-radius: 53px;
+		border-color: rgba(177,177,172,1);
+		outline: 0;
 	}
-	#_2 {
+	#selectboxARROW {
 		opacity: 0.7;
 		fill: rgba(102,140,74,1);
 	}
-	._2 {
+	.selectboxARROW {
 		overflow: visible;
 		position: absolute;
 		width: 17px;
 		height: 13px;
 		transform: translate(-1479px, -2204px) matrix(1,0,0,1,1529,2210) rotate(180deg);
 		transform-origin: center;
-		left: 0px;
-		top: 0px;
+		left: 1480px;
+		top:2245px;
 	}
+	#allproduct {
+		position: absolute;
+		background-color: brown;
+		top: 2290px;
+		left: 363px;
+		width: 1194px;
+		height: 1730px;
+		z-index: -1;
+	}
+
 	#_3_gt {
 		opacity: 0.9;
 		fill: rgba(255,255,255,1);
@@ -3273,7 +3244,7 @@
 			<span>"철이 없었죠.... 그땐."</span><br><span style="color:rgba(0,0,0,1);">미림인 B양의 첫 교내봉사 후기</span>
 		  </div>
 	  </div>
-	<div id="viewmoreFONT">
+	<div id="viewmoreFONT" onclick="location.href='#'">
 		<span>더보기 ></span>
 	</div>
 
@@ -4136,22 +4107,26 @@
 			<span>No Image</span>
 		</div>
 	</div>
-	<div id="viewmoreFONT" style="top: 4066px;">
+	<div id="viewmoreFONT" onclick="location.href='#'"style="top: 4066px;">
 		<span>더보기 ></span>
 	</div>
-	<svg class="_26_gp">
-		<rect id="_26_gp" rx="15" ry="15" x="0" y="0" width="93" height="30">
-		</rect>
+
+	<select class="selectbox">
+		<option selected>최신순</option>
+		<option>인기순</option>
+		<option>저가순</option>
+		<option>고가순</option>
+	</select>
+	<svg class="selectboxARROW"viewBox="0 0 17 13">
+		<path id="selectboxARROW" d="M 7.663029670715332 1.280071258544922 C 8.057735443115234 0.6764036417007446 8.942263603210449 0.6764036417007446 9.336969375610352 1.280071139335632 L 15.98833656311035 11.45275020599365 C 16.4232120513916 12.11785411834717 15.94602394104004 13 15.1513671875 13 L 1.848632454872131 13 C 1.053975701332092 13.00000095367432 0.576787531375885 12.11785411834717 1.011662840843201 11.45275115966797 Z">
+		</path>
 	</svg>
-	<div id="_32_gq">
-		<div id="_gr">
-			<span>최신순</span>
-		</div>
-		<svg class="_2" viewBox="0 0 17 13">
-			<path id="_2" d="M 7.663029670715332 1.280071258544922 C 8.057735443115234 0.6764036417007446 8.942263603210449 0.6764036417007446 9.336969375610352 1.280071139335632 L 15.98833656311035 11.45275020599365 C 16.4232120513916 12.11785411834717 15.94602394104004 13 15.1513671875 13 L 1.848632454872131 13 C 1.053975701332092 13.00000095367432 0.576787531375885 12.11785411834717 1.011662840843201 11.45275115966797 Z">
-			</path>
-		</svg>
+
+	<div id="allproduct">
+
 	</div>
+
+	
 	<svg class="_3_gt" viewBox="0 0 1920 120">
 		<path onclick="application.goToTargetView(event)" id="_3_gt" d="M 0 0 L 1920 0 L 1920 120 L 0 120 L 0 0 Z">
 		</path>
