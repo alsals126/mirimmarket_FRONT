@@ -8,21 +8,46 @@
 
 <link href="../css/top.css" rel="stylesheet" type="text/css" />
 <style id="applicationStylesheet" type="text/css">
-	.mediaViewInfo {
-		--web-view-name: 상품 등록;
-		--web-view-id: _;
-		--web-scale-on-resize: true;
-		--web-enable-deep-linking: true;
-	}
-	:root {
-		--web-view-ids: _;
-	}
 	* {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-		border: none;
 	}
+	@font-face {
+		font-family: 'TmoneyRoundWind';
+		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+	#titleFONT1 {
+		left: 465px;
+		top: 197px;
+		position: absolute;
+		overflow: visible;
+		white-space: nowrap;
+		text-align: left;
+		font-family: 'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 50px;
+		color: rgba(69,69,69,1);
+	}
+	#titleFONT2 {
+		opacity: 0.5;
+		left: 688px;
+		top: 229px;
+		position: absolute;
+		overflow: visible;
+		white-space: nowrap;
+		line-height: 30px;
+		margin-top: -2px;
+		text-align: left;
+		font-family: 'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		color: rgba(69,69,69,1);
+	}/*
 	#_ {
 		position: absolute;
 		width: 1920px;
@@ -33,26 +58,75 @@
 		--web-view-id: _;
 		--web-scale-on-resize: true;
 		--web-enable-deep-linking: true;
-	}
-	#_18 {
-		opacity: 0.2;
-		fill: rgba(255,255,255,1);
-		stroke: rgba(0,0,0,1);
-		stroke-width: 0.5px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	._18 {
-		overflow: visible;
+	}*/
+	.regisSECTION {
 		position: absolute;
-		width: 1092.5px;
-		height: 1776.5px;
+		overflow: visible;
 		left: 465px;
 		top: 305px;
-		transform: matrix(1,0,0,1,0,0);
+		width: 1092px;
+		height: 1776px;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		border-radius: 30px;
+
+		white-space: nowrap;
+		text-align: left;
+		font-family: 'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
 	}
+	#regisFONT1 {
+		opacity: 0.5;
+		left: 102px;
+		top: 58px;
+		position: absolute;
+		overflow: visible;
+		height: 1000px;
+		font-size: 30px;
+		color: rgba(69,69,69,1);
+	}
+	#regisFONT2 {
+		left: 220px;
+		top: 68px;
+		position: absolute;
+		overflow: visible;
+		font-size: 30px;
+		color: rgba(102,140,74,1);
+	}
+
+	#categorySECTION {
+		position: absolute;
+		left: 102px;
+		top: 119px;
+		overflow: visible;
+		white-space: nowrap;
+		text-align: left;
+		font-family: 'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		color: rgba(0,0,0,1);
+	}
+	.categoryBOX{
+		cursor: pointer;
+		appearance: none;
+		-webkit-appearance: none;
+		outline: 0;
+		font-family: 'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		border: 2px solid rgb(102,140,74);
+		border-radius: 10px;
+		background: rgba(255, 255, 255, 1);
+		color: rgba(0,0,0,1);
+		width: 206px;
+		height: 50px;
+	}
+	.categoryBOX option{
+		font-size: 20px;
+	}
+
 	#__p {
 		opacity: 0.5;
 		left: 567px;
@@ -62,27 +136,13 @@
 		width: 99px;
 		white-space: nowrap;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 30px;
 		color: rgba(69,69,69,1);
 	}
-	#_bq {
-		opacity: 0.5;
-		left: 567px;
-		top: 363px;
-		position: absolute;
-		overflow: visible;
-		width: 121px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tmoney RoundWind;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 30px;
-		color: rgba(69,69,69,1);
-	}
+	
 	#__r {
 		opacity: 0.5;
 		left: 567px;
@@ -92,7 +152,7 @@
 		width: 129px;
 		white-space: nowrap;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 30px;
@@ -108,29 +168,11 @@
 		line-height: 30px;
 		margin-top: -3px;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 24px;
 		color: rgba(0,0,0,1);
-	}
-	#_14 {
-		fill: rgba(255,255,255,1);
-		stroke: rgba(102,140,74,1);
-		stroke-width: 2px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	._14 {
-		overflow: visible;
-		position: absolute;
-		width: 206px;
-		height: 50px;
-		left: 567px;
-		top: 424px;
-		transform: matrix(1,0,0,1,0,0);
 	}
 	#_-_ {
 		left: 583px;
@@ -142,7 +184,7 @@
 		line-height: 30px;
 		margin-top: -3px;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 24px;
@@ -176,26 +218,13 @@
 		line-height: 30px;
 		margin-top: -3px;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 24px;
 		color: rgba(0,0,0,1);
 	}
-	#__x {
-		left: 465px;
-		top: 197px;
-		position: absolute;
-		overflow: visible;
-		width: 215px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tmoney RoundWind;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 50px;
-		color: rgba(69,69,69,1);
-	}
+	
 	#_13 {
 		fill: transparent;
 		stroke: rgba(102,140,74,1);
@@ -222,26 +251,13 @@
 		width: 14px;
 		white-space: nowrap;
 		text-align: right;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 30px;
 		color: rgba(102,140,74,1);
 	}
-	#_ba {
-		left: 686px;
-		top: 373px;
-		position: absolute;
-		overflow: visible;
-		width: 14px;
-		white-space: nowrap;
-		text-align: right;
-		font-family: Tmoney RoundWind;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 30px;
-		color: rgba(102,140,74,1);
-	}
+	
 	#_bb {
 		left: 694px;
 		top: 667px;
@@ -250,7 +266,7 @@
 		width: 14px;
 		white-space: nowrap;
 		text-align: right;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 30px;
@@ -264,7 +280,7 @@
 		width: 14px;
 		white-space: nowrap;
 		text-align: right;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 30px;
@@ -278,7 +294,7 @@
 		width: 14px;
 		white-space: nowrap;
 		text-align: right;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 30px;
@@ -319,7 +335,7 @@
 		width: 61px;
 		white-space: nowrap;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 30px;
@@ -334,7 +350,7 @@
 		width: 159px;
 		white-space: nowrap;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 30px;
@@ -349,7 +365,7 @@
 		width: 129px;
 		white-space: nowrap;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 30px;
@@ -364,7 +380,7 @@
 		width: 61px;
 		white-space: nowrap;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 30px;
@@ -378,7 +394,7 @@
 		width: 14px;
 		white-space: nowrap;
 		text-align: right;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 30px;
@@ -394,7 +410,7 @@
 		line-height: 30px;
 		margin-top: -3px;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 24px;
@@ -410,7 +426,7 @@
 		line-height: 30px;
 		margin-top: -3px;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 24px;
@@ -506,7 +522,7 @@
 		line-height: 30px;
 		margin-top: -3px;
 		text-align: right;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 24px;
@@ -522,7 +538,7 @@
 		line-height: 30px;
 		margin-top: -3px;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 24px;
@@ -538,7 +554,7 @@
 		line-height: 30px;
 		margin-top: -3px;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 24px;
@@ -554,7 +570,7 @@
 		line-height: 30px;
 		margin-top: -3px;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 24px;
@@ -570,7 +586,7 @@
 		line-height: 30px;
 		margin-top: -3px;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 24px;
@@ -586,7 +602,7 @@
 		line-height: 30px;
 		margin-top: -3px;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 24px;
@@ -602,7 +618,7 @@
 		line-height: 30px;
 		margin-top: -3px;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 24px;
@@ -618,26 +634,11 @@
 		line-height: 30px;
 		margin-top: -3px;
 		text-align: right;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 24px;
 		color: rgba(0,0,0,1);
-	}
-	#_bq {
-		opacity: 0.5;
-		left: 567px;
-		top: 363px;
-		position: absolute;
-		overflow: visible;
-		width: 121px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tmoney RoundWind;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 30px;
-		color: rgba(69,69,69,1);
 	}
 	#_br {
 		opacity: 0.5;
@@ -648,7 +649,7 @@
 		width: 61px;
 		white-space: nowrap;
 		text-align: right;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 30px;
@@ -663,29 +664,13 @@
 		width: 129px;
 		white-space: nowrap;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 30px;
 		color: rgba(69,69,69,1);
 	}
-	#_____ {
-		opacity: 0.5;
-		left: 688px;
-		top: 229px;
-		position: absolute;
-		overflow: visible;
-		width: 432px;
-		white-space: nowrap;
-		line-height: 30px;
-		margin-top: -2px;
-		text-align: left;
-		font-family: Tmoney RoundWind;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 26px;
-		color: rgba(69,69,69,1);
-	}
+	
 	#ID11000____ {
 		opacity: 0.5;
 		left: 761px;
@@ -697,7 +682,7 @@
 		line-height: 30px;
 		margin-top: -7px;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 16px;
@@ -835,7 +820,7 @@
 		width: 14px;
 		white-space: nowrap;
 		text-align: right;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 30px;
@@ -849,7 +834,7 @@
 		width: 14px;
 		white-space: nowrap;
 		text-align: right;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 30px;
@@ -935,7 +920,7 @@
 		width: 161px;
 		white-space: nowrap;
 		text-align: left;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 40px;
@@ -949,7 +934,7 @@
 		width: 161px;
 		white-space: nowrap;
 		text-align: center;
-		font-family: Tmoney RoundWind;
+		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 40px;
@@ -1274,27 +1259,49 @@
 			</ul>
 		</div>
 	</div>
-<div id="_">
-	<svg class="_18" viewBox="0 0 1092 1776">
-		<path id="_18" d="M 30 0 L 1062 0 C 1078.568603515625 0 1092 13.43145751953125 1092 30 L 1092 1746 C 1092 1762.568603515625 1078.568603515625 1776 1062 1776 L 30 1776 C 13.43145751953125 1776 0 1762.568603515625 0 1746 L 0 30 C 0 13.43145751953125 13.43145751953125 0 30 0 Z">
-		</path>
-	</svg>
+<div>
+	<div id="titleFONT1">
+		<span>상품 등록</span>
+	</div>
+	<div id="titleFONT2">
+		<span>중고 거래할 상품을 등록할 수 있어요.</span>
+	</div>
+
+	<div class="regisSECTION">
+		<div id="regisFONT1">카테고리</div>
+		<div id="regisFONT2">*</div>
+		<div id="categorySECTION">
+			<select class="categoryBOX">
+				<optgroup label="CLOTHES">
+					<option>교복</option>
+					<option>체육복</option>
+					<option>사복</option>
+					<option>액세서리</option>
+				</optgroup>
+				<optgroup label="BOOKS">
+					<option>전공도서</option>
+					<option>일반도서</option>
+					<option>교과서</option>
+				</optgroup>
+				<optgroup label="OTHERS">
+					<option>학용품</option>
+					<option>학교굿즈</option>
+					<option>주변기기</option>
+					<option>기타상품</option>
+				</optgroup>
+			</select>
+		</div>
+	</div>
 	<div id="__p">
 		<span>글 제목</span>
 	</div>
-	<div id="_bq">
-		<span>카테고리</span>
-	</div>
+	
 	<div id="__r">
 		<span>상품 사진</span>
 	</div>
 	<div id="ID1_">
 		<span>1학년 체육복</span>
 	</div>
-	<svg class="_14" viewBox="0 0 204 48">
-		<path id="_14" d="M 10 0.9795918464660645 L 194 0 C 199.5228424072266 0 204 4.385781764984131 204 9.795918464660645 L 204 38.20408248901367 C 204 43.61421585083008 199.5228424072266 48 194 48 L 10 48 C 4.477152347564697 48 0 43.61421585083008 0 38.20408248901367 L 0 9.795918464660645 C 0 4.385781764984131 4.477152347564697 0.9795918464660645 10 0.9795918464660645 Z">
-		</path>
-	</svg>
 	<div id="_-_">
 		<span>옷 - 체육복</span>
 	</div>
@@ -1305,9 +1312,7 @@
 	<div id="_w">
 		<span>선택</span>
 	</div>
-	<div id="__x">
-		<span>상품 등록</span>
-	</div>
+	
 	<svg class="_13" viewBox="0 0 612 2">
 		<path id="_13" d="M 0 0 L 612 0">
 		</path>
@@ -1315,9 +1320,7 @@
 	<div id="_z">
 		<span>*</span>
 	</div>
-	<div id="_ba">
-		<span>*</span>
-	</div>
+	
 	<div id="_bb">
 		<span>*</span>
 	</div>
@@ -1400,18 +1403,13 @@
 	<div id="_bp">
 		<span>개</span>
 	</div>
-	<div id="_bq">
-		<span>카테고리</span>
-	</div>
 	<div id="_br">
 		<span>상태</span>
 	</div>
 	<div id="__bs">
 		<span>상세 설명</span>
 	</div>
-	<div id="_____">
-		<span>중고 거래할 상품을 등록할 수 있어요.</span>
-	</div>
+	
 	<div id="ID11000____">
 		<span>1~1000 사이의 숫자로 입력해 주세요.</span>
 	</div>
