@@ -11,6 +11,7 @@
 <link href="top.css" rel="stylesheet" type="text/css" />
 <link href="selectbox.css" rel="stylesheet" type="text/css" />
 <link href="product.css" rel="stylesheet" type="text/css" />
+<link href="bottom.css" rel="stylesheet" type="text/css" />
 <style id="applicationStylesheet" type="text/css">
 /*
 	.mediaViewInfo {
@@ -122,7 +123,7 @@
 	
 	#selectPAGE {
 		position: absolute;
-		left: 889px;
+		left: 850px;
 		top: 2150px;
 		overflow: visible;
 
@@ -132,104 +133,32 @@
 		font-size: 26px;
 		color: rgba(69,69,69,1);
 	}
-
 	#selectPAGE li{
 		list-style: none;
-	width: auto;
-	text-align: center;
-	margin-right: 25px;
-	float: left;
-}
-	#_83 {
-		fill: rgba(242,197,61,1);
+		height: 35px;
+		width: 35px;
+		text-align: center;
+		margin-right: 15px;
+		float: left;
+		border-radius: 70%;
 	}
-	._83 {
+	#selectPAGE a{
+		text-decoration: none;
+		color: rgba(69,69,69,1);
+	}
+	#selected{ background-color: rgba(242,197,61,1); }
+	#selected a{
+		text-decoration: none; 
+		color: rgb(255, 255, 255);
+	}
+
+	.bottom {
 		position: absolute;
 		overflow: visible;
-		width: 31px;
-		height: 31px;
+		width: 1920px;
+		height: 470px;
 		left: 0px;
-		top: 3px;
-	}
-	#ID1 {
-		left: 7px;
-		top: 0px;
-		position: absolute;
-		overflow: visible;
-		width: 15px;
-		white-space: nowrap;
-		line-height: 30px;
-		margin-top: -2px;
-		text-align: left;
-		font-family: 'TmoneyRoundWind';
-		font-style: normal;
-		font-weight: normal;
-		font-size: 26px;
-		color: rgba(255,255,255,1);
-	}
-	#ID2 {
-		left: 44px;
-		top: 0px;
-		position: absolute;
-		overflow: visible;
-		width: 15px;
-		white-space: nowrap;
-		line-height: 30px;
-		margin-top: -2px;
-		text-align: left;
-		font-family: 'TmoneyRoundWind';
-		font-style: normal;
-		font-weight: normal;
-		font-size: 26px;
-		color: rgba(69,69,69,1);
-	}
-	#ID3 {
-		left: 81px;
-		top: 0px;
-		position: absolute;
-		overflow: visible;
-		width: 15px;
-		white-space: nowrap;
-		line-height: 30px;
-		margin-top: -2px;
-		text-align: left;
-		font-family: 'TmoneyRoundWind';
-		font-style: normal;
-		font-weight: normal;
-		font-size: 26px;
-		color: rgba(69,69,69,1);
-	}
-	#ID4 {
-		left: 1007px;
-		top: 2150px;
-		position: absolute;
-		overflow: visible;
-		width: 15px;
-		white-space: nowrap;
-		line-height: 30px;
-		margin-top: -2px;
-		text-align: left;
-		font-family: 'TmoneyRoundWind';
-		font-style: normal;
-		font-weight: normal;
-		font-size: 26px;
-		color: rgba(69,69,69,1);
-	}
-	#_ex {
-		left: 155px;
-		top: 0px;
-		position: absolute;
-		overflow: visible;
-		width: 19px;
-		white-space: nowrap;
-		line-height: 30px;
-		margin-top: -2px;
-		text-align: left;
-		font-family: 'TmoneyRoundWind';
-		font-style: normal;
-		font-weight: normal;
-		font-size: 26px;
-		color: rgba(69,69,69,1);
+		top: 2350px;
 	}
 </style>
 
@@ -573,30 +502,53 @@
 	
 	<div id="selectPAGE">
 		<ul>
-			<li>1</li>
-			<li>2</li>
-			<li>3</li>
-			<li>4</li>
+			<li id="selected"><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">></a></li>
 		</ul>
-		<svg class="_83">
-			<ellipse id="_83" rx="15.5" ry="15.5" cx="15.5" cy="15.5">
-			</ellipse>
-		</svg><!--
-		<div id="ID1">
-			<span>1</span>
-		</div>
-		<div id="ID2">
-			<span>2</span>
-		</div>
-		<div id="ID3">
-			<span>3</span>
-		</div>-->
-		<div id="_ex">
-			<span>></span>
-		</div>
 	</div>
-	<div id="ID4">
-		<span>4</span>
+
+	<svg class="bottom">
+		<rect id="bottom" rx="0" ry="0" x="0" y="0" width="1920" height="470">
+		</rect>
+	</svg>
+	<div class="bottom">
+		<img id="bottomLOGO" src="logo_whitever.png" srcset="logo_whitever.png 1x, logo_whitever@2x.png 2x">
+		<div id="bottomFONT" style="left: 424px; top: 61px; font-size: 30px; font-weight: bold; opacity: 1; margin-top: -2px;">
+			<span>미림마켓</span>
+		</div>
+		<div id="bottomFONT">
+			<span>이용약관</span>
+		</div>
+		<div id="bottomFONT" style="left: 669px;">
+			<span>유해 사용자 신고</span>
+		</div>
+		<div id="bottomFONT" style="left: 977px;">
+			<span>1:1 문의</span>
+		</div>
+		<div id="bottomFONT" style="top: 177px;">
+			<span>개인정보보호방침</span>
+		</div>
+		<div id="bottomFONT" style="left: 669px; top: 177px;">
+			<span>오류 제보</span>
+		</div>
+		<div id="bottomFONT" style="top: 247px;">
+			<span>모든 상품들에 대하여, 미림마켓은 통신판매중개자로서 중고거래마켓 미림마켓의 거래 당사자가 아니며, 입점판매자가 등록한 상품정보 및 거래에 대해 책임을 지지 않습니다.</span>
+		</div>
+		<svg class="bottomLINE" viewBox="0 0 1194 1">
+			<path id="bottomLINE" d="M 0 0 L 1194 0"></path>
+		</svg>
+		<div id="bottomFONT" style="top: 327px;">
+			<span>제휴문의 luckyponyo97@gmail.com</span>
+		</div>
+		<div id="bottomFONT" style="top: 357px;">
+			<span>서울시 관악구 호암로 546 (신림동) 미림여자정보과학고등학교</span>
+		</div>
+		<div id="bottomFONT" style="top: 407px; opacity: 1;">
+			<span>©Mirim Market Inc.</span>
+		</div>
 	</div>
 </div>
 </body>
