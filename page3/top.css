@@ -144,7 +144,7 @@
 }
 #topMENU1:hover .topMENU2{ display: block; }
 .topMENU2:hover{ display: block; }
-.topMENU2 ul:hover{ background-color: lemonchiffon; }
+.topMENU2 ul:hover{ background: rgba(242, 195, 61, 0.8); }
 #topMENU2photo {
 	cursor: pointer;
 	position: absolute;
