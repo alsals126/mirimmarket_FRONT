@@ -5,24 +5,24 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
             @font-face {
-    font-family: 'TmoneyRoundWind';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-#menu1{
-            opacity: 0.9;
-		    background: rgb(255,255,255,1);    
-            filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.051));
-		    width: 1920px;
-		    height: 120px;
+                font-family: 'TmoneyRoundWind';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            #topMENU1{
+                opacity: 0.9;
+                background: rgb(255,255,255,1);    
+                filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.051));
+                width: 1920px;
+                height: 120px;
 
-            font-family: 'Quicksand', sans-serif;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 26px;
-            color: rgba(0,0,0,1);
-        }
+                font-family: 'Quicksand', sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 26px;
+                color: rgba(0,0,0,1);
+            }
         #topLOGO {
             position: absolute;
             width: 52.273px;
@@ -126,51 +126,119 @@
             li{
                 list-style: none;
             }
-            #menu1>ul{
+            #topMENU1>ul{
                 position: absolute;
                 left: 520px;
                 top: 40px;
                 width: 760px;
             }
-            #menu1>ul li{
+            #topMENU1>ul li{
                 width: auto;
                 text-align: center;
                 margin-left: 60px;
                 float: left;
             }
-            #menu1>ul li a{
+            #topMENU1>ul li a{
                 display: block;
             }
-            #menu1>ul li a:hover{
+            #topMENU1>ul li a:hover{
                 background: darkblue;
                 color: darkorange;
             }
-            #menu1>ul li:hover{
+            #topMENU1>ul li:hover{
                 background: darkblue;
                 color: darkorange;
             }
-            .menu2{
+            .topMENU2{
+                opacity: 0.9;
+                background: rgba(255,255,255,1);
+                filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.051));
+                height: 370px;
+                width: 1920px;
                 position: absolute;
                 top: 120px;
-                height: 500px;
-                width: 1920px;
-                background: darkorchid;
                 display: none;
 
                 font-family: Tmoney RoundWind;
             }
-            #menu1:hover .menu2{
+            #topMENU1:hover .topMENU2{
                 display: block;
             }
-            .menu2:hover{
+            .topMENU2:hover{
                 display: block;
             }
-            .menu2 ul{
+            .topMENU2 ul{
+                width: auto;
                 float: left;
-                margin: 0 auto;
+                margin-left: 550px;
                 overflow: hidden;
             }
-            
+
+            #topMENU2photo {
+                position: absolute;
+                width: 418px;
+                height: 300px;
+                left: 149px;
+                top: 9px;
+                overflow: visible;
+            }
+	        #topMENU2photo_ {
+		        fill: rgba(242,240,213,1);
+	        }
+	        .topMENU2photo_ {
+                position: absolute;
+                overflow: visible;
+                width: 418px;
+                height: 300px;
+                left: 0px;
+                top: 0px;
+            }
+            #topMENU2photo__ {
+                position: absolute;
+                left: 12px;
+                top: 93px;
+                overflow: visible;
+            }
+            #topMENU2photoFONT1 {
+                left: 9px;
+                top: 0px;
+                position: absolute;
+                overflow: visible;
+                white-space: nowrap;
+                text-align: right;
+                font-family: Tmoney RoundWind;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 22px;
+                color: rgba(242,197,61,1);
+            }
+            #topMENU2photoFONT2 {
+                filter: drop-shadow(2px 3px 0px rgba(242, 197, 61, 1));
+                left: 0px;
+                top: 21px;
+                position: absolute;
+                overflow: visible;
+                white-space: nowrap;
+                text-align: right;
+                font-family: Tmoney RoundWind;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 46px;
+                color: rgba(102,140,74,1);
+            }
+            #topMENU2photoFONT3 {
+                left: 21px;
+                top: 82px;
+                position: absolute;
+                overflow: visible;
+                white-space: nowrap;
+                text-align: left;
+                font-family: Tmoney RoundWind;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                color: rgba(177,177,172,1);
+            }            
         </style>
     </head>
     <body>
@@ -231,7 +299,7 @@
         </div>
         -->
 
-        <div id="menu1">
+        <div id="topMENU1">
             <div id="topLOGO">
                 <img src="logo_g.png" srcset="logo_g.png 1x, logo_g@2x.png 2x">
             </div>
@@ -264,8 +332,30 @@
                 <path id="topCHAT" d="M 3.73769998550415 30.53096389770508 L 5.74560022354126 23.63983154296875 C 5.769867420196533 23.55661582946777 5.802201271057129 23.47894477844238 5.841295719146729 23.40716934204102 C 3.949563980102539 20.97958946228027 2.835000038146973 18.00008583068848 2.835000038146973 14.7806282043457 C 2.835000038146973 6.617892265319824 9.998100280761719 0 18.83430099487305 0 C 27.67140007019043 0 34.83449935913086 6.617892265319824 34.83449935913086 14.7806282043457 C 34.83449935913086 22.94336318969727 27.67140007019043 29.56125640869141 18.83430099487305 29.56125640869141 C 16.03469657897949 29.56125640869141 13.40354633331299 28.89715194702148 11.11445426940918 27.7298469543457 L 5.422500133514404 31.79301452636719 C 5.221633911132813 31.93643379211426 5.005940437316895 31.9999942779541 4.797270774841309 31.99999809265137 C 4.114921092987061 32.0000114440918 3.507498264312744 31.32039642333984 3.73769998550415 30.53096389770508 Z">
                 </path>
             </svg>
-            <div class="menu2">
-                
+            <div class="topMENU2">
+                <div id="topMENU2photo">
+                    <svg class="topMENU2photo_">
+                        <rect id="topMENU2photo_" rx="10" ry="10" x="0" y="0" width="418" height="300">
+                        </rect>
+                    </svg>
+                    <img id="topMENU2photo__" src="_-2.png" srcset="_-2.png 1x, _-2@2x.png 2x">
+                    <img id="topMENU2photo__" style="left: 147px; top: 177px;"src="T_4.png" srcset="T_4.png 1x, T_4@2x.png 2x">
+                        
+                    <div id="topMENU2photo__" style="left: 191px; top: 50px;">
+                        <div id="topMENU2photoFONT1">
+                            <span>사진부 선생님 굿즈</span>
+                        </div>
+                        <div id="topMENU2photoFONT2">
+                            <span>한정입고!</span>
+                        </div>
+                        <div id="topMENU2photoFONT3">
+                            <span>#귀엽다</span>
+                        </div>
+                        <div id="topMENU2photoFONT3" style="left: 89px; top: 82px;">
+                            <span>#새로운_모습</span>
+                        </div>                        
+                    </div>
+                </div>
                 <ul class="clothes">
                     <li>교복</li>
                     <li>체육복</li>
