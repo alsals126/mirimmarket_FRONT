@@ -13,10 +13,8 @@
 	color: rgba(0,0,0,1);
 	z-index: 100;
 }
-#topMENU1 a{
-	text-decoration: none;
-	color: #404040;
-}
+#topMENU1 a{text-decoration: none;}
+#topMENU1>ul a{	color: #404040; }
 #topMENU1 li{ list-style: none; }
 #topMENU1>ul{
 	position: absolute;
@@ -142,6 +140,7 @@
 	text-align: center;
 	margin-top: 40px;
 }
+.topMENU2 a{ color: #000000; }
 #topMENU1:hover .topMENU2{ display: block; }
 .topMENU2:hover{ display: block; }
 .topMENU2 ul:hover{ background: rgba(242, 195, 61, 0.8); }
