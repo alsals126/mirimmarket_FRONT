@@ -8,14 +8,11 @@
 
 <link href="../css/top.css" rel="stylesheet" type="text/css" />
 <style id="applicationStylesheet" type="text/css">
-	.mediaViewInfo {
-		--web-view-name: 상품 페이지;
-		--web-view-id: _;
-		--web-scale-on-resize: true;
-		--web-enable-deep-linking: true;
-	}
-	:root {
-		--web-view-ids: _;
+	@font-face {
+		font-family: 'TmoneyRoundWind';
+		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
 	}
 	* {
 		margin: 0;
@@ -23,6 +20,190 @@
 		box-sizing: border-box;
 		border: none;
 	}
+	.productIMGslider {
+        position: absolute;
+		left: 363px;
+		top: 200px;
+    	width: 582px;
+        margin: auto;
+    }
+    .imgSlider {display: none}            
+    .fade {
+    	-webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    .imgSlider img {
+        vertical-align: middle;
+        width: 582px;
+        height: 493px;
+    } 
+    .productPREV, .productNEXT {
+        cursor: pointer;
+        position: absolute;
+        top: 5px;
+        height: 100%;
+        padding: 16px;
+        padding-top: 220px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+    	transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+    }
+    .productNEXT { right: 0; }
+    .productHEART img{
+        cursor: pointer;
+        position: absolute;
+        bottom: 50px;
+        right: 10px;
+        height: 50px;
+        width: 50px;
+    }
+    .productDOT {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    .active, .productDOT:hover { background-color: rgba(102,140,74,1); }
+    @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+    @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+    @media only screen and (max-width: 300px) {
+        .productPREV, .productNEXT {font-size: 11px}
+    }
+    
+	.modal {
+        display: none;
+        z-index: 500;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .modal button {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 30px;
+    	background: transparent;
+        border: 0;
+        color: #ffffff;
+        font-size: 3rem;
+    }
+    .modalBox { width: 30%; }
+    .modalBox img {
+        position: absolute;
+        width: auto;             
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+	#categorySECTION {
+		opacity: 0.5;
+		left: 975px;
+		top: 219px;
+		position: absolute;
+		overflow: visible;
+		white-space: nowrap;
+		text-align: left;
+		font-family: 'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		color: rgba(0,0,0,1);
+	}
+	.categoryBOX{
+		cursor: pointer;
+		appearance: none;
+		-webkit-appearance: none;
+		border: 0;
+		outline: 0;
+		font-family: 'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		background: rgba(255, 255, 255, 0);
+		color: rgba(0,0,0,1);
+	}
+	.categoryBOX option{
+		font-size: 20px;
+	}
+
+	#productFONT1 {
+		opacity: 0.8;
+		left: 1297px;
+		top: 218px;
+		position: absolute;
+		overflow: visible;
+		white-space: nowrap;
+		line-height: 30px;
+		margin-top: -6px;
+		text-align: right;
+		font-family: 'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(69,69,69,1);
+	}
+	#productTITLE {
+		left: 975px;
+		top: 284px;
+		position: absolute;
+		font-family: 'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 50px;
+		color: rgba(69,69,69,1);
+	}
+	#productFONT2{
+		left: 975px;
+		top: 408px;
+		position: absolute;
+		font-family: 'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(69,69,69,1);
+	}
+
+	#productStateFill { fill: rgba(102,140,74,1); }
+	.productStateFill {	
+		position: absolute;
+		overflow: visible;
+		top: 454px;
+	}
+	#productStateNoneFill {
+		opacity: 0.2;
+		fill: transparent;
+		stroke: rgba(0,0,0,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.productStateNoneFill {
+		position: absolute;
+		overflow: visible;
+		top: 454px;
+	}
+
 	#_ {
 		position: absolute;
 		width: 1920px;
@@ -51,20 +232,7 @@
 		left: 363px;
 		top: 1151px;
 	}
-	#ID1_ {
-		left: 975px;
-		top: 284px;
-		position: absolute;
-		overflow: hidden;
-		width: 481px;
-		height: 65px;
-		text-align: left;
-		font-family: Tmoney RoundWind;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 50px;
-		color: rgba(69,69,69,1);
-	}
+	
 	#_43 {
 		position: absolute;
 		width: 276px;
@@ -233,22 +401,6 @@
 		font-size: 24px;
 		color: rgba(69,69,69,1);
 	}
-	#__1_ {
-		left: 975px;
-		top: 408px;
-		position: absolute;
-		overflow: visible;
-		width: 159px;
-		white-space: nowrap;
-		line-height: 30px;
-		margin-top: -3px;
-		text-align: right;
-		font-family: Tmoney RoundWind;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 24px;
-		color: rgba(69,69,69,1);
-	}
 	#_27_ {
 		fill: rgba(242,197,61,1);
 	}
@@ -349,23 +501,7 @@
 		left: 664px;
 		top: 713px;
 	}
-	#_50 {
-		opacity: 0.8;
-		left: 1297px;
-		top: 218px;
-		position: absolute;
-		overflow: visible;
-		width: 79px;
-		white-space: nowrap;
-		line-height: 30px;
-		margin-top: -6px;
-		text-align: right;
-		font-family: Tmoney RoundWind;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 18px;
-		color: rgba(69,69,69,1);
-	}
+	
 	#_2021-04-02 {
 		opacity: 0.8;
 		left: 1406px;
@@ -1186,7 +1322,85 @@
 		overflow: visible;
 	}
 </style>
-<script id="applicationScript">
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+    	showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("imgSlider");
+        var dots = document.getElementsByClassName("productDOT");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+    }
+
+    $(function(){
+        $(".productHEART").click(function(){
+            var on = '../img/heartON.png';
+            var off = '../img/heartOFF.png';
+            var currentIMG = $(this).children("img").attr("src");
+              
+            var imgSrc = on === currentIMG ? off : on;
+            $(".productHEART img").attr("src", imgSrc);
+        });
+        // 이미지 클릭시 해당 이미지 모달
+	    $(".imgSlider").click(function(){
+		    $(".modal").show();
+		    // 해당 이미지 가져오기
+		    var imgSrc = $(this).children("img").attr("src");
+		    $(".modalBox img").attr("src", imgSrc);
+	    });
+		//.modal안에 button을 클릭하면 .modal닫기
+	    $(".modal button").click(function(){
+		    $(".modal").hide();
+	    });
+	
+	    //.modal밖에 클릭시 닫힘
+	    $(".modal").click(function (e) {
+            if (e.target.className != "modal") {
+                return false;
+            } else {
+                $(".modal").hide();
+            }
+        });
+    });
+
+    window.onload = function(){
+        currentSlide(1);
+    }
+
+	function state(){
+		const maxState = 5;
+		var position = 1075;
+		var state = 3;
+		for(var i=1; i<=state; i++){
+			document.write(
+				'<svg class="productStateFill" style="left: '+ position + 'px;"> <ellipse id="productStateFill" rx="15" ry="15" cx="15" cy="15"/> </svg>'
+			);
+			position += 38;
+		}
+
+		for(var i=state; i<maxState; i++){
+			document.write(
+				'<svg class="productStateNoneFill" style="left: '+ position + 'px;"> <ellipse id="productStateNoneFill" rx="15" ry="15" cx="15" cy="15"/> </svg>'
+			);
+			position += 38;
+		}
+	}
 </script>
 </head>
 <body>
@@ -1272,59 +1486,58 @@
 			</ul>
 		</div>
 	</div>
-<div id="_">
+	
+	<div class="productIMGslider">
+		<div class="imgSlider fade">
+			<img src="../img/noimage.PNG">
+		</div>            
+		<div class="imgSlider fade">
+		  	<img src="../img/puppy.jpg">
+		</div>             
+		<a class="productPREV" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="productNEXT" onclick="plusSlides(1)">&#10095;</a>
+		<div class="productHEART">
+		  	<img src="../img/heartOFF.png">
+		</div>
+		<br>
+		<div style="text-align:center">
+		  	<span class="productDOT" onclick="currentSlide(1)"></span> 
+		  	<span class="productDOT" onclick="currentSlide(2)"></span>
+		</div>
+	</div>  
+	<div class="modal">
+		<button>&times;</button>
+		<div class="modalBox">
+			<img src="" alt="">
+		</div>
+	</div>
+
+	<div id="categorySECTION">
+		<span>의류 ></span>
+		<select class="categoryBOX">
+			<option>교복</option>
+			<option>체육복</option>
+			<option>사복</option>
+			<option>액세서리</option>
+		</select>
+	</div>
+
+	<div id="productFONT1">조회 50회</div>
+	<div id="productFONT1" style="left: 1406px;">등록일 2021-04-02</div>
+	<div id="productTITLE">1학년 체육복</div>
+	<div id="productFONT2">재고 : 1개 남음</div>
+	<div id="productFONT2" style="top:455px">상태: 상</div>
+	<script>state()</script>
+	<div id="productFONT2" style="left: 1385px; top: 512px; font-size: 42px;">20,000<span style="font-size:26px;">원</span></div>
+
+<div>
 	<svg class="_28">
 		<rect id="_28" rx="10" ry="10" x="0" y="0" width="1194" height="450">
 		</rect>
 	</svg>
-	<div id="ID1_">
-		<span>1학년 체육복</span>
-	</div>
-	<div id="_43">
-		<div id="__r">
-			<span>상태: 상</span>
-		</div>
-		<svg class="_27">
-			<ellipse id="_27" rx="15" ry="15" cx="15" cy="15">
-			</ellipse>
-		</svg>
-		<svg class="_28_t">
-			<ellipse id="_28_t" rx="15" ry="15" cx="15" cy="15">
-			</ellipse>
-		</svg>
-		<svg class="_29">
-			<ellipse id="_29" rx="15" ry="15" cx="15" cy="15">
-			</ellipse>
-		</svg>
-		<svg class="_30">
-			<ellipse id="_30" rx="15" ry="15" cx="15" cy="15">
-			</ellipse>
-		</svg>
-		<svg class="_31">
-			<ellipse id="_31" rx="15" ry="15" cx="15" cy="15">
-			</ellipse>
-		</svg>
-	</div>
-	<div id="ID20000">
-		<span>20,000</span><span style="font-size:26px;">원</span>
-	</div>
-	<div id="_29_y">
-		<svg class="_18">
-			<rect id="_18" rx="0" ry="0" x="0" y="0" width="582" height="493">
-			</rect>
-		</svg>
-		<div id="No_Image">
-			<span>No Image</span>
-		</div>
-	</div>
-	<div id="__">
-		<span>옷 > 체육복</span>
-	</div>
+	
 	<div id="____________100">
 		<span>잘 세탁해서 냄새가 나지 않습니다. 색이 같아서 입을 수 있을 겁니다. 사이즈는 100입니다!</span>
-	</div>
-	<div id="__1_">
-		<span>재고 : 1개 남음</span>
 	</div>
 	<svg class="_27_">
 		<rect id="_27_" rx="10" ry="10" x="0" y="0" width="582" height="104">
@@ -1344,20 +1557,6 @@
 				</path>
 			</svg>
 		</div>
-	</div>
-	<svg class="_85">
-		<ellipse id="_85" rx="10" ry="10" cx="10" cy="10">
-		</ellipse>
-	</svg>
-	<svg class="_86">
-		<ellipse id="_86" rx="10" ry="10" cx="10" cy="10">
-		</ellipse>
-	</svg>
-	<div id="_50">
-		<span>조회 50회</span>
-	</div>
-	<div id="_2021-04-02">
-		<span>등록일 2021-04-02</span>
 	</div>
 	<div id="___be">
 		<span>다른 상품도 둘러보세요</span>
@@ -1490,20 +1689,7 @@
 	<svg class="_12_cf" viewBox="0 0 1194 2">
 		<path id="_12_cf" d="M 0 0 L 1194 0">
 		</path>
-	</svg>
-	<div id="layer1_ci">
-		<svg class="path2361_cj" viewBox="1.893 1.899 50 45">
-			<path id="path2361_cj" d="M 15.95157337188721 1.901095032691956 C 1.911373257637024 1.645789861679077 -11.08079147338867 23.86355018615723 26.77105331420898 46.8989143371582 C 26.81293869018555 46.82346725463867 26.97228622436523 46.82346725463867 27.01416206359863 46.8989143371582 C 66.08771514892578 23.12037658691406 50.98516464233398 0.2162874490022659 36.47610473632813 1.999289870262146 C 30.81916999816895 2.694919109344482 28.15004730224609 5.871248722076416 26.89261054992676 8.603117942810059 C 25.63517379760742 5.871248722076416 22.96605491638184 2.694919109344482 17.31013679504395 1.999289870262146 C 16.85660552978516 1.943474173545837 16.40408515930176 1.909364223480225 15.95157337188721 1.901095032691956 L 15.95157337188721 1.901095032691956 Z">
-			</path>
-		</svg>
-	</div>
-	<div id="layer1_ci">
-		<svg class="path2361_cj" viewBox="1.893 1.899 50 45">
-			<path id="path2361_cj" d="M 15.95157337188721 1.901095032691956 C 1.911373257637024 1.645789861679077 -11.08079147338867 23.86355018615723 26.77105331420898 46.8989143371582 C 26.81293869018555 46.82346725463867 26.97228622436523 46.82346725463867 27.01416206359863 46.8989143371582 C 66.08771514892578 23.12037658691406 50.98516464233398 0.2162874490022659 36.47610473632813 1.999289870262146 C 30.81916999816895 2.694919109344482 28.15004730224609 5.871248722076416 26.89261054992676 8.603117942810059 C 25.63517379760742 5.871248722076416 22.96605491638184 2.694919109344482 17.31013679504395 1.999289870262146 C 16.85660552978516 1.943474173545837 16.40408515930176 1.909364223480225 15.95157337188721 1.901095032691956 L 15.95157337188721 1.901095032691956 Z">
-			</path>
-		</svg>
-	</div>
-	
+	</svg>	
 </div>
 </body>
 </html>
