@@ -47,7 +47,8 @@
 		font-weight: normal;
 		font-size: 26px;
 		color: rgba(69,69,69,1);
-	}/*
+	}
+	/*
 	#_ {
 		position: absolute;
 		width: 1920px;
@@ -81,7 +82,6 @@
 		top: 58px;
 		position: absolute;
 		overflow: visible;
-		height: 1000px;
 		font-size: 30px;
 		color: rgba(69,69,69,1);
 	}
@@ -93,6 +93,14 @@
 		font-size: 30px;
 		color: rgba(102,140,74,1);
 	}
+	#regisFONT3{
+		position: absolute;
+		left: 250px;
+		font-family: 'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+	}
 
 	#categorySECTION {
 		position: absolute;
@@ -100,7 +108,7 @@
 		top: 119px;
 		border: 2px solid rgb(102,140,74);
 		border-radius: 10px;
-		background: rgba(255,255,255,0);
+		z-index: 1;
 	}
 	.categoryBOX{
 		cursor: pointer;
@@ -121,7 +129,34 @@
 		outline: 0;
 	}
 	.categoryBOX option{ font-size: 20px; }
+	.categoryARROW {
+		fill: rgba(102,140,74,1);
+		position: absolute;
+		left: 160px;
+		top: 15px;
+		width: 24px;
+		height: 20px;
+		transform: rotate(180deg);
+		z-index: -1;
+	}
 
+	#regisINPUT{
+		position: absolute;
+		left: 102px;
+		top: 265px;
+		width: 170px;
+		height: 50px;
+		padding-right: 30px;
+		text-align: right;
+		font-family: 'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		border: 0;
+		outline: 0;
+		background: rgba(255,255,255,0);
+		border-bottom: 2.5px solid rgba(102,140,74,1);
+	}
 	#__p {
 		opacity: 0.5;
 		left: 567px;
@@ -295,19 +330,7 @@
 		font-size: 30px;
 		color: rgba(102,140,74,1);
 	}
-	#_3 {
-		fill: rgba(102,140,74,1);
-	}
-	._3 {
-		overflow: visible;
-		position: absolute;
-		width: 24px;
-		height: 20px;
-		transform: matrix(1,0,0,1,731,439) rotate(180deg);
-		transform-origin: center;
-		left: 0px;
-		top: 0px;
-	}
+	
 	#_5 {
 		fill: rgba(102,140,74,1);
 	}
@@ -480,19 +503,6 @@
 		left: 567px;
 		top: 1432px;
 		transform: matrix(1,0,0,1,0,0);
-	}
-	#_4 {
-		fill: rgba(102,140,74,1);
-	}
-	._4 {
-		overflow: visible;
-		position: absolute;
-		width: 24px;
-		height: 20px;
-		transform: matrix(1,0,0,1,731,439) rotate(180deg);
-		transform-origin: center;
-		left: 0px;
-		top: 0px;
 	}
 	#_6 {
 		fill: rgba(242,197,61,1);
@@ -1285,17 +1295,29 @@
 					<option>기타상품</option>
 				</optgroup>
 			</select>
+			<svg class="categoryARROW">
+				<path d="M 10.28501415252686 2.858309507369995 C 11.06182098388672 1.563631415367126 12.93817901611328 1.563631415367126 13.71498489379883 2.858309507369995 L 22.1826057434082 16.97100830078125 C 22.9824333190918 18.30405807495117 22.02220726013184 19.99999809265137 20.46761894226074 20 L 3.5323805809021 20 C 1.977791786193848 19.99999809265137 1.017565488815308 18.30405807495117 1.817394971847534 16.97100830078125 Z">
+				</path>
+			</svg>
 		</div>
-	</div>
-	<div id="__p">
-		<span>글 제목</span>
-	</div>
-	
-	<div id="__r">
-		<span>상품 사진</span>
-	</div>
-	<div id="ID1_">
-		<span>1학년 체육복</span>
+
+		<div id="regisFONT1" style="top: 205px;">글 제목</div>
+		<div id="regisFONT2" style="top: 215px; left: 200px;">*</div>
+		<input type="text" id="regisINPUT" style="width: 610px; text-align: left; padding: 0px;">
+
+		<div id="regisFONT1" style="top: 352px;">상품 사진</div>
+		<div id="regisFONT2" style="top: 362px; left: 230px;">*</div>
+
+		<div id="regisFONT1" style="top: 625px;">가격</div>
+		<div id="regisFONT2" style="top: 635px; left: 165px;">*</div>
+		<input type="text" id="regisINPUT" style="top: 685px;">
+		<div id="regisFONT3" style="top: 693px;">원</div>
+
+		<div id="regisFONT1" style="top: 772px;">수량</div>
+		<div id="regisFONT2" style="top: 782px; left: 165px;">*</div>
+		<input type="text" id="regisINPUT" style="border-color: rgba(242,197,61,1); top: 832px;">
+		<div id="regisFONT3" style="top: 840px;">개</div>
+
 	</div>
 	<svg class="_15" viewBox="0 0 204 48">
 		<path id="_15" d="M 10 0.9795918464660645 L 194 0 C 199.5228424072266 0 204 4.385781764984131 204 9.795918464660645 L 204 38.20408248901367 C 204 43.61421585083008 199.5228424072266 48 194 48 L 10 48 C 4.477152347564697 48 0 43.61421585083008 0 38.20408248901367 L 0 9.795918464660645 C 0 4.385781764984131 4.477152347564697 0.9795918464660645 10 0.9795918464660645 Z">
@@ -1305,75 +1327,31 @@
 		<span>선택</span>
 	</div>
 	
-	<svg class="_13" viewBox="0 0 612 2">
-		<path id="_13" d="M 0 0 L 612 0">
-		</path>
-	</svg>
-	<div id="_z">
-		<span>*</span>
-	</div>
-	
-	<div id="_bb">
-		<span>*</span>
-	</div>
 	<div id="_bc">
 		<span>*</span>
 	</div>
 	<div id="_bd">
 		<span>*</span>
 	</div>
-	<svg class="_3" viewBox="0 0 24 20">
-		<path id="_3" d="M 10.28501415252686 2.858309507369995 C 11.06182098388672 1.563631415367126 12.93817901611328 1.563631415367126 13.71498489379883 2.858309507369995 L 22.1826057434082 16.97100830078125 C 22.9824333190918 18.30405807495117 22.02220726013184 19.99999809265137 20.46761894226074 20 L 3.5323805809021 20 C 1.977791786193848 19.99999809265137 1.017565488815308 18.30405807495117 1.817394971847534 16.97100830078125 Z">
-		</path>
-	</svg>
+	
 	<svg class="_5" viewBox="0 0 24 20">
 		<path id="_5" d="M 10.28501415252686 2.858309507369995 C 11.06182098388672 1.563631415367126 12.93817901611328 1.563631415367126 13.71498489379883 2.858309507369995 L 22.1826057434082 16.97100830078125 C 22.9824333190918 18.30405807495117 22.02220726013184 19.99999809265137 20.46761894226074 20 L 3.5323805809021 20 C 1.977791786193848 19.99999809265137 1.017565488815308 18.30405807495117 1.817394971847534 16.97100830078125 Z">
 		</path>
 	</svg>
-	<div id="_be">
-		<span>가격</span>
-	</div>
 	<div id="__">
 		<span>소비자 학년</span>
 	</div>
 	<div id="__ba">
 		<span>익명 여부</span>
 	</div>
-	<div id="_bf">
-		<span>수량</span>
-	</div>
-	<div id="_bg">
-		<span>*</span>
-	</div>
-	<div id="ID20000">
-		<span>20,000</span>
-	</div>
-	<div id="ID2000000">
-		<span>2000000</span>
-	</div>
-	<svg class="_14_bd" viewBox="0 0 174 2">
-		<path id="_14_bd" d="M 0 0 L 174 0">
-		</path>
-	</svg>
-	<svg class="_15_be" viewBox="0 0 174 2">
-		<path id="_15_be" d="M 0 0 L 174 0">
-		</path>
-	</svg>
 	<svg class="_17" viewBox="0 0 888 240">
 		<path id="_17" d="M 43.52941131591797 4.89795970916748 L 844.4705810546875 0 C 868.5111694335938 0 888 21.92890739440918 888 48.97959518432617 L 888 191.0204162597656 C 888 218.0710906982422 868.5111694335938 240.0000152587891 844.4705810546875 240.0000152587891 L 43.52941131591797 240.0000152587891 C 19.4887809753418 240.0000152587891 0 218.0710906982422 0 191.0204162597656 L 0 48.97959518432617 C 0 21.92890739440918 19.4887809753418 4.89795970916748 43.52941131591797 4.89795970916748 Z">
-		</path>
-	</svg>
-	<svg class="_4" viewBox="0 0 24 20">
-		<path id="_4" d="M 10.28501415252686 2.858309507369995 C 11.06182098388672 1.563631415367126 12.93817901611328 1.563631415367126 13.71498489379883 2.858309507369995 L 22.1826057434082 16.97100830078125 C 22.9824333190918 18.30405807495117 22.02220726013184 19.99999809265137 20.46761894226074 20 L 3.5323805809021 20 C 1.977791786193848 19.99999809265137 1.017565488815308 18.30405807495117 1.817394971847534 16.97100830078125 Z">
 		</path>
 	</svg>
 	<svg class="_6" viewBox="0 0 24 20">
 		<path id="_6" d="M 10.28501415252686 2.858309507369995 C 11.06182098388672 1.563631415367126 12.93817901611328 1.563631415367126 13.71498489379883 2.858309507369995 L 22.1826057434082 16.97100830078125 C 22.9824333190918 18.30405807495117 22.02220726013184 19.99999809265137 20.46761894226074 20 L 3.5323805809021 20 C 1.977791786193848 19.99999809265137 1.017565488815308 18.30405807495117 1.817394971847534 16.97100830078125 Z">
 		</path>
 	</svg>
-	<div id="_bi">
-		<span>원</span>
-	</div>
 	<div id="__bj">
 		<span>상관 없음</span>
 	</div>
@@ -1391,9 +1369,6 @@
 	</div>
 	<div id="ID3">
 		<span>3학년</span>
-	</div>
-	<div id="_bp">
-		<span>개</span>
 	</div>
 	<div id="_br">
 		<span>상태</span>
