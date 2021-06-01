@@ -6,7 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>상품 페이지</title>
 
+<script type="text/javascript" src="../js/product.js"></script>
+
 <link href="../css/top.css" rel="stylesheet" type="text/css" />
+<link href="../css/slider.css" rel="stylesheet" type="text/css" />
+<link href="../css/product.css" rel="stylesheet" type="text/css" />
 <style id="applicationStylesheet" type="text/css">
 	@font-face {
 		font-family: 'TmoneyRoundWind';
@@ -225,6 +229,51 @@
 		fill: rgba(255,255,255,1);
 	}
 
+	.detailANDother{
+		position: absolute;
+		left: 363px;
+		top: 781px;
+		width: 1200px;
+	}
+	.detailFONT {
+		font-family:'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 30px;
+		color: rgba(69,69,69,1);
+	}
+	hr{
+		width: 1194px;
+		border: 2px solid rgba(242, 197, 61, 1);
+		margin-top: 20px;
+	}
+	.detailSECTION {
+		width: 1194px;
+		line-height: 40px;
+		font-size: 24px;
+		margin-top: 23px;
+	}
+	.other{
+		width: 1194px;
+		height: 450px;
+		border-radius: 10px;
+		border: 2px solid rgba(242,197,61,1);
+		margin-top: 200px;
+	}
+	#___be {
+		left: 465px;
+		top: 1180px;
+		position: absolute;
+		overflow: visible;
+		width: 254px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Tmoney RoundWind;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(69,69,69,1);
+	}
 
 	#_ {
 		position: absolute;
@@ -407,22 +456,7 @@
 		font-size: 26px;
 		color: rgba(0,0,0,1);
 	}
-	#____________100 {
-		left: 363px;
-		top: 868px;
-		position: absolute;
-		overflow: visible;
-		width: 1195px;
-		height: 250px;
-		line-height: 40px;
-		margin-top: -8px;
-		text-align: left;
-		font-family: Tmoney RoundWind;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 24px;
-		color: rgba(69,69,69,1);
-	}
+	
 	
 	#_47 {
 		position: absolute;
@@ -509,20 +543,7 @@
 		font-size: 18px;
 		color: rgba(69,69,69,1);
 	}
-	#___be {
-		left: 465px;
-		top: 1180px;
-		position: absolute;
-		overflow: visible;
-		width: 254px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tmoney RoundWind;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 24px;
-		color: rgba(69,69,69,1);
-	}
+	
 	#__bf {
 		left: 465px;
 		top: 1511px;
@@ -993,38 +1014,8 @@
 		left: 0px;
 		top: 0px;
 	}
-	#__ce {
-		left: 363px;
-		top: 781px;
-		position: absolute;
-		overflow: visible;
-		width: 129px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tmoney RoundWind;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 30px;
-		color: rgba(69,69,69,1);
-	}
-	#_12_cf {
-		fill: transparent;
-		stroke: rgba(242,197,61,1);
-		stroke-width: 2px;
-		stroke-linejoin: miter;
-		stroke-linecap: butt;
-		stroke-miterlimit: 4;
-		shape-rendering: auto;
-	}
-	._12_cf {
-		overflow: visible;
-		position: absolute;
-		width: 1194px;
-		height: 2px;
-		left: 363px;
-		top: 840px;
-		transform: matrix(1,0,0,1,0,0);
-	}
+	
+	
 	#layer1_ci {
 		position: absolute;
 		width: 50px;
@@ -1520,18 +1511,319 @@
 		</div>
 	</a>
 
-<div>
-	<svg class="_28">
-		<rect id="_28" rx="10" ry="10" x="0" y="0" width="1194" height="450">
-		</rect>
-	</svg>
+	<div class="detailANDother">
+		<div class="detailFONT">상세 정보</div>
+		<hr>
+		<div class="detailFONT detailSECTION">
+			잘 세탁해서 냄새가 나지 않습니다. 색이 같아서 입을 수 있을 겁니다. 사이즈는 100입니다!
+		</div>
+		<div class="other">
+			<div class="detailFONT" style="font-size: 24px;">다른 상품도 둘러보세요</div>
+			<div class="slidebox">
+				<input type="radio" name="slide" id="slide01" checked>
+				<input type="radio" name="slide" id="slide02">
+				<input type="radio" name="slide" id="slide03">
+				<input type="radio" name="slide" id="slide04">
+				<ul class="slidelist">
+					<li class="slideitem">
+						<a>
+							<div id="product" onclick="">
+								<div id="productIMGpos">
+									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+								</div>
+								<div id="productName">
+									<span>교복 마이</span>
+								</div>
+								<div id="productPrice">
+									<span>20,000</span><span style="font-size:14px;">원</span>
+								</div>
+								<div id="productCategory">
+									<span>옷>교복</span>
+								</div>
+								<div id="productState">
+									<span>상태: 상</span>
+								</div>
+								<script> state()</script>
+							</div>
+						</a>
+						<a style>
+							<div id="product">
+								<div id="productIMGpos">
+									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+								</div>
+								<div id="productName">
+									<span>교복 마이</span>
+								</div>
+								<div id="productPrice">
+									<span>20,000</span><span style="font-size:14px;">원</span>
+								</div>
+								<div id="productCategory">
+									<span>옷>교복</span>
+								</div>
+								<div id="productState">
+									<span>상태: 상</span>
+								</div>
+								<script> state()</script>
+							</div>
+						</a>
+						<a>
+							<div id="product">
+								<div id="productIMGpos">
+									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+								</div>
+								<div id="productName">
+									<span>교복 마이</span>
+								</div>
+								<div id="productPrice">
+									<span>20,000</span><span style="font-size:14px;">원</span>
+								</div>
+								<div id="productCategory">
+									<span>옷>교복</span>
+								</div>
+								<div id="productState">
+									<span>상태: 상</span>
+								</div>
+								<script> state()</script>
+							</div>
+						</a>
+					</li>
+					<li class="slideitem">
+						<a>
+							<div id="product" onclick="">
+								<div id="productIMGpos">
+									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+								</div>
+								<div id="productName">
+									<span>교복 마이</span>
+								</div>
+								<div id="productPrice">
+									<span>20,000</span><span style="font-size:14px;">원</span>
+								</div>
+								<div id="productCategory">
+									<span>옷>교복</span>
+								</div>
+								<div id="productState">
+									<span>상태: 상</span>
+								</div>
+								<script> state()</script>
+							</div>
+						</a>
+						<a style>
+							<div id="product">
+								<div id="productIMGpos">
+									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+								</div>
+								<div id="productName">
+									<span>교복 마이</span>
+								</div>
+								<div id="productPrice">
+									<span>20,000</span><span style="font-size:14px;">원</span>
+								</div>
+								<div id="productCategory">
+									<span>옷>교복</span>
+								</div>
+								<div id="productState">
+									<span>상태: 상</span>
+								</div>
+								<script> state()</script>
+							</div>
+						</a>
+						<a>
+							<div id="product">
+								<div id="productIMGpos">
+									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+								</div>
+								<div id="productName">
+									<span>교복 마이</span>
+								</div>
+								<div id="productPrice">
+									<span>20,000</span><span style="font-size:14px;">원</span>
+								</div>
+								<div id="productCategory">
+									<span>옷>교복</span>
+								</div>
+								<div id="productState">
+									<span>상태: 상</span>
+								</div>
+								<script> state()</script>
+							</div>
+						</a>
+					</li>
+					<li class="slideitem">
+						<a>
+							<div id="product" onclick="">
+								<div id="productIMGpos">
+									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+								</div>
+								<div id="productName">
+									<span>교복 마이</span>
+								</div>
+								<div id="productPrice">
+									<span>20,000</span><span style="font-size:14px;">원</span>
+								</div>
+								<div id="productCategory">
+									<span>옷>교복</span>
+								</div>
+								<div id="productState">
+									<span>상태: 상</span>
+								</div>
+								<script> state()</script>
+							</div>
+						</a>
+						<a style>
+							<div id="product">
+								<div id="productIMGpos">
+									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+								</div>
+								<div id="productName">
+									<span>교복 마이</span>
+								</div>
+								<div id="productPrice">
+									<span>20,000</span><span style="font-size:14px;">원</span>
+								</div>
+								<div id="productCategory">
+									<span>옷>교복</span>
+								</div>
+								<div id="productState">
+									<span>상태: 상</span>
+								</div>
+								<script> state()</script>
+							</div>
+						</a>
+						<a>
+							<div id="product">
+								<div id="productIMGpos">
+									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+								</div>
+								<div id="productName">
+									<span>교복 마이</span>
+								</div>
+								<div id="productPrice">
+									<span>20,000</span><span style="font-size:14px;">원</span>
+								</div>
+								<div id="productCategory">
+									<span>옷>교복</span>
+								</div>
+								<div id="productState">
+									<span>상태: 상</span>
+								</div>
+								<script> state()</script>
+							</div>
+						</a>
+					</li>
+					<li class="slideitem">
+						<a>
+							<div id="product" onclick="">
+								<div id="productIMGpos">
+									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+								</div>
+								<div id="productName">
+									<span>교복 마이</span>
+								</div>
+								<div id="productPrice">
+									<span>20,000</span><span style="font-size:14px;">원</span>
+								</div>
+								<div id="productCategory">
+									<span>옷>교복</span>
+								</div>
+								<div id="productState">
+									<span>상태: 상</span>
+								</div>
+								<script> state()</script>
+							</div>
+						</a>
+						<a style>
+							<div id="product">
+								<div id="productIMGpos">
+									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+								</div>
+								<div id="productName">
+									<span>교복 마이</span>
+								</div>
+								<div id="productPrice">
+									<span>20,000</span><span style="font-size:14px;">원</span>
+								</div>
+								<div id="productCategory">
+									<span>옷>교복</span>
+								</div>
+								<div id="productState">
+									<span>상태: 상</span>
+								</div>
+								<script> state()</script>
+							</div>
+						</a>
+						<a>
+							<div id="product">
+								<div id="productIMGpos">
+									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+								</div>
+								<div id="productName">
+									<span>교복 마이</span>
+								</div>
+								<div id="productPrice">
+									<span>20,000</span><span style="font-size:14px;">원</span>
+								</div>
+								<div id="productCategory">
+									<span>옷>교복</span>
+								</div>
+								<div id="productState">
+									<span>상태: 상</span>
+								</div>
+								<script> state()</script>
+							</div>
+						</a>
+					</li>
+				</ul>
+				
+				</svg>
+				<div class="slide-control">
+					<div class="control01">
+						<label for="slide03" class="prev"></label>
+						<label for="slide02" class="next"></label>
+					</div>
+					<div class="control02">
+						<label for="slide01" class="prev"></label>
+						<label for="slide03" class="next"></label>
+					</div>
+					<div class="control03">
+						<label for="slide02" class="prev"></label>
+						<label for="slide01" class="next"></label>
+					</div>
+				</div>
+			</div>
+			<div class="slide-control">
+				<div class="control01">
+					<label for="slide03" class="prev"></label>
+					<label for="slide02" class="next"></label>
+				</div>
+				<div class="control02">
+					<label for="slide01" class="prev"></label>
+					<label for="slide03" class="next"></label>
+				</div>
+				<div class="control03">
+					<label for="slide02" class="prev"></label>
+					<label for="slide01" class="next"></label>
+				</div>
+			</div>
+		</div>
+		<div class="slide-control">
+					<div class="control01">
+						<label for="slide03" class="prev"></label>
+						<label for="slide02" class="next"></label>
+					</div>
+					<div class="control02">
+						<label for="slide01" class="prev"></label>
+						<label for="slide03" class="next"></label>
+					</div>
+					<div class="control03">
+						<label for="slide02" class="prev"></label>
+						<label for="slide01" class="next"></label>
+					</div>
+				</div>
+	</div>
 	
-	<div id="____________100">
-		<span>잘 세탁해서 냄새가 나지 않습니다. 색이 같아서 입을 수 있을 겁니다. 사이즈는 100입니다!</span>
-	</div>
-	<div id="___be">
-		<span>다른 상품도 둘러보세요</span>
-	</div>
+
+<div>
 	<div id="__bf">
 		<span>교복 마이</span>
 	</div>
@@ -1654,13 +1946,7 @@
 		<path id="_6" d="M 0 34.99887466430664 L 30 0 L 0 34.99887466430664 Z M 30 70 L 0 34.99887466430664 L 30 70 Z">
 		</path>
 	</svg>
-	<div id="__ce">
-		<span>상세 정보</span>
-	</div>
-	<svg class="_12_cf" viewBox="0 0 1194 2">
-		<path id="_12_cf" d="M 0 0 L 1194 0">
-		</path>
-	</svg>	
+		
 </div>
 </body>
 </html>
