@@ -113,7 +113,6 @@
         left: 50%;
         transform: translate(-50%,-50%);
     }
-
 	#category {
 		left: 975px;
 		top: 219px;
@@ -127,7 +126,6 @@
 		font-size: 26px;
 		color: rgba(0,0,0,0.5);
 	}
-
 	#productFONT1 {
 		opacity: 0.8;
 		left: 1297px;
@@ -158,6 +156,7 @@
 	#productFONT2{
 		left: 975px;
 		top: 408px;
+		width: 180px;
 		position: absolute;
 		font-family: 'TmoneyRoundWind';
 		font-style: normal;
@@ -165,7 +164,17 @@
 		font-size: 24px;
 		color: rgba(69,69,69,1);
 	}
-
+	#productFONT3{
+		left: 180px;
+		top: 30px;
+		position: absolute;
+		width: 287px;
+		font-family:'TmoneyRoundWind';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 30px;
+		color: rgba(69,69,69,1);
+	}
 	#productStateFill { fill: rgba(102,140,74,1); }
 	.productStateFill {	
 		position: absolute;
@@ -187,6 +196,35 @@
 		overflow: visible;
 		top: 454px;
 	}
+	.productCHAT {
+		position: absolute;
+		width: 582px;
+		height: 104px;
+		left: 975px;
+		top: 589px;
+		background: rgba(242,197,61,1);
+		border-radius: 10px;
+	}
+	.productCHAT_ {
+		position: absolute;
+		background: rgba(177,177,172,1);
+		border-radius: 70%;
+		width: 60px;
+		height: 60px;
+		left: 110px;
+		top: 23px;
+	}
+	.productCHAT__ {
+		overflow: visible;
+		position: absolute;
+		width: 21.451px;
+		height: 22.881px;
+		left: 19.958px;
+		top: 17.098px;
+		transform: matrix(1,0,0,1,0,0);
+		fill: rgba(255,255,255,1);
+	}
+
 
 	#_ {
 		position: absolute;
@@ -385,18 +423,7 @@
 		font-size: 24px;
 		color: rgba(69,69,69,1);
 	}
-	#_27_ {
-		fill: rgba(242,197,61,1);
-	}
-	._27_ {
-		position: absolute;
-		width: 582px;
-		height: 104px;
-		left: 975px;
-		top: 589px;
-		background: rgba(202, 202, 202,0.5);
-		border-radius: 10px;
-	}
+	
 	#_47 {
 		position: absolute;
 		width: 366px;
@@ -429,29 +456,7 @@
 		top: 0px;
 		overflow: visible;
 	}
-	#_84 {
-		fill: rgba(177,177,172,1);
-	}
-	._84 {
-		position: absolute;
-		overflow: visible;
-		width: 60px;
-		height: 60px;
-		left: 0px;
-		top: 0px;
-	}
-	#_11 {
-		fill: rgba(255,255,255,1);
-	}
-	._11 {
-		overflow: visible;
-		position: absolute;
-		width: 21.451px;
-		height: 22.881px;
-		left: 19.958px;
-		top: 17.098px;
-		transform: matrix(1,0,0,1,0,0);
-	}
+	
 	#_85 {
 		fill: rgba(102,140,74,1);
 		stroke: rgba(177,177,172,1);
@@ -1489,7 +1494,7 @@
 		  	<span class="productDOT" onclick="currentSlide(1)"></span> 
 		  	<span class="productDOT" onclick="currentSlide(2)"></span>
 		</div>
-	</div>  
+	</div>
 	<div class="modal">
 		<button>&times;</button>
 		<div class="modalBox">
@@ -1505,7 +1510,15 @@
 	<div id="productFONT2" style="top:455px">상태: 상</div>
 	<script>state()</script>
 	<div id="productFONT2" style="left: 1385px; top: 512px; font-size: 42px;">20,000<span style="font-size:26px;">원</span></div>
-	<div class="_27_"></div>
+	<a href="#" class="productCHAT">
+		<div id="productFONT3">판매자에게 채팅 걸기</div>
+		<div class="productCHAT_">
+			<svg class="productCHAT__" viewBox="61.076 32.612 21.451 22.881">
+				<path d="M 77.24864196777344 42.98297500610352 C 77.97481536865234 41.91318893432617 78.40121459960938 40.61114501953125 78.40121459960938 39.20626068115234 C 78.40121459960938 35.56433486938477 75.53793334960938 32.61199951171875 72.00588989257813 32.61199951171875 C 68.473876953125 32.61199951171875 65.610595703125 35.56433486938477 65.610595703125 39.20626068115234 C 65.610595703125 40.54690170288086 65.99897003173828 41.79386138916016 66.66551208496094 42.83473205566406 C 63.33505630493164 44.36153793334961 61.07599258422852 48.30723190307617 61.07599258422852 51.71537780761719 C 61.07599258422852 56.68445205688477 82.52707672119141 56.78560256958008 82.52707672119141 51.81656265258789 C 82.52707672119141 48.51559829711914 80.40794372558594 44.54845809936523 77.24864196777344 42.98297500610352 Z">
+				</path>
+			</svg>
+		</div>
+	</a>
 
 <div>
 	<svg class="_28">
@@ -1515,25 +1528,6 @@
 	
 	<div id="____________100">
 		<span>잘 세탁해서 냄새가 나지 않습니다. 색이 같아서 입을 수 있을 겁니다. 사이즈는 100입니다!</span>
-	</div>
-	<svg class="_27_">
-		<rect id="_27_" rx="10" ry="10" x="0" y="0" width="582" height="104">
-		</rect>
-	</svg>
-	<div id="_47">
-		<div id="___">
-			<span>판매자에게 채팅 걸기</span>
-		</div>
-		<div id="_44">
-			<svg class="_84">
-				<ellipse id="_84" rx="30" ry="30" cx="30" cy="30">
-				</ellipse>
-			</svg>
-			<svg class="_11" viewBox="61.076 32.612 21.451 22.881">
-				<path id="_11" d="M 77.24864196777344 42.98297500610352 C 77.97481536865234 41.91318893432617 78.40121459960938 40.61114501953125 78.40121459960938 39.20626068115234 C 78.40121459960938 35.56433486938477 75.53793334960938 32.61199951171875 72.00588989257813 32.61199951171875 C 68.473876953125 32.61199951171875 65.610595703125 35.56433486938477 65.610595703125 39.20626068115234 C 65.610595703125 40.54690170288086 65.99897003173828 41.79386138916016 66.66551208496094 42.83473205566406 C 63.33505630493164 44.36153793334961 61.07599258422852 48.30723190307617 61.07599258422852 51.71537780761719 C 61.07599258422852 56.68445205688477 82.52707672119141 56.78560256958008 82.52707672119141 51.81656265258789 C 82.52707672119141 48.51559829711914 80.40794372558594 44.54845809936523 77.24864196777344 42.98297500610352 Z">
-				</path>
-			</svg>
-		</div>
 	</div>
 	<div id="___be">
 		<span>다른 상품도 둘러보세요</span>
