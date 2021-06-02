@@ -2,7 +2,6 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>메인</title>
 
@@ -14,38 +13,6 @@
 		<link href="../css/product.css" rel="stylesheet" type="text/css" />
 		<link href="../css/bottom.css" rel="stylesheet" type="text/css" />
 		<style id="applicationStylesheet" type="text/css">
-			/*
-			.mediaViewInfo {
-				--web-view-name: 메인;
-				--web-view-id: ;
-				--web-scale-on-resize: true;
-				--web-enable-deep-linking: true;
-			}
-			:root {
-				--web-view-ids: ;
-			}*/
-			/*
-			# {
-				position: absolute;
-				width: 1920px;
-				height: 4723px;
-				background-color: rgba(255,255,255,1);
-				overflow: hidden;
-				--web-view-name: 메인;
-				--web-view-id: ;
-				--web-scale-on-resize: true;
-				--web-enable-deep-linking: true;
-			}
-			@keyframes fadein {
-			
-				0% {
-					opacity: 0;
-				}
-				100% {
-					opacity: 1;
-				}
-			
-			}*/
 			* {
 				margin: 0;
 				padding: 0;
@@ -228,14 +195,16 @@
 				top: 4223px;
 			}
 		</style>
-
 	</head>
 	<body>
 		<div id="">
+			<!-- 상단바 -->
 			<div id="topMENU1">
+				<!-- 고정되어 있는 상단바-->
 				<div id="topLOGO">
 					<img src="../img/logo_g.png" srcset="../img/logo_g.png 1x, ../img/logo_g@2x.png 2x">
 				</div>
+				<!-- 이거 링크 꼭!!!!!! 걸어주세요-->
 				<ul>
 					<li><a href="#">HOME</a></li>
 					<li><a href="#">CLOTHES</a></li>
@@ -243,6 +212,9 @@
 					<li><a href="#">OTHERS</a></li>
 					<li><a href="#">WANT</a></li>
 				</ul>
+				<!-- 사진 찾는데 한계가 있어, html으로 그린걸로 사용했습니다.
+					 원하는 아이콘 주시면 그걸로 바꿔서 다시 드리도록 하겠습니다.
+				-->
 				<svg class="topMY" viewBox="61.076 32.612 30 32">
 					<path id="topMY" d="M 83.69393920898438 47.11613464355469 C 84.70953369140625 45.61999893188477 85.30586242675781 43.79904937744141 85.30586242675781 41.83426666259766 C 85.30586242675781 36.74092864990234 81.30147552490234 32.61199951171875 76.36181640625 32.61199951171875 C 71.42215728759766 32.61199951171875 67.41777801513672 36.74092864990234 67.41777801513672 41.83426666259766 C 67.41777801513672 43.70920181274414 67.96092224121094 45.4531135559082 68.89311981201172 46.9088134765625 C 64.23535919189453 49.04409408569336 61.07599639892578 54.56227111816406 61.07599639892578 59.32867050170898 C 61.07599639892578 66.27806854248047 91.07599639892578 66.41953277587891 91.07599639892578 59.47016906738281 C 91.07599639892578 54.85367965698242 88.11231231689453 49.30550384521484 83.69393920898438 47.11613464355469 Z">
 					</path>
@@ -265,7 +237,10 @@
 					<path id="topCHAT" d="M 3.73769998550415 30.53096389770508 L 5.74560022354126 23.63983154296875 C 5.769867420196533 23.55661582946777 5.802201271057129 23.47894477844238 5.841295719146729 23.40716934204102 C 3.949563980102539 20.97958946228027 2.835000038146973 18.00008583068848 2.835000038146973 14.7806282043457 C 2.835000038146973 6.617892265319824 9.998100280761719 0 18.83430099487305 0 C 27.67140007019043 0 34.83449935913086 6.617892265319824 34.83449935913086 14.7806282043457 C 34.83449935913086 22.94336318969727 27.67140007019043 29.56125640869141 18.83430099487305 29.56125640869141 C 16.03469657897949 29.56125640869141 13.40354633331299 28.89715194702148 11.11445426940918 27.7298469543457 L 5.422500133514404 31.79301452636719 C 5.221633911132813 31.93643379211426 5.005940437316895 31.9999942779541 4.797270774841309 31.99999809265137 C 4.114921092987061 32.0000114440918 3.507498264312744 31.32039642333984 3.73769998550415 30.53096389770508 Z">
 					</path>
 				</svg>
+				
+				<!-- 펼쳤을 때 보이는 상단바의 하단-->
 				<div class="topMENU2">
+					<!-- 사진부 굿즈 -->
 					<div id="topMENU2photo">
 						<svg class="topMENU2photo_">
 							<rect id="topMENU2photo_" rx="10" ry="10" x="0" y="0" width="418" height="300">
@@ -289,6 +264,7 @@
 							</div>                        
 						</div>
 					</div>
+
 					<ul id="clothes" style="margin-left: 700px;">
 						<li><a href="#">교복</a></li>
 						<li>체육복</li>
@@ -315,266 +291,193 @@
 				</div>
 			</div>
 
+			<!-- 배너 -->
 			<img id="banner" src="../img/__1__1.png" srcset="../img/__1__1.png 1x, ../img/__1__1@2x.png 2x">
 
+			<!-- 슬라이드 -->
 			<div id="titleFONT" style="top: 817px; width: 348px;">
 				<span>#조회수_탑 #이건_사야해!</span>
 			</div>
 			<div class="slidebox">
+				<!-- 라디오 박스를 이용하여 슬라이드 만듬-->
 				<input type="radio" name="slide" id="slide01" checked>
 				<input type="radio" name="slide" id="slide02">
 				<input type="radio" name="slide" id="slide03">
 				<input type="radio" name="slide" id="slide04">
 				<ul class="slidelist">
+					<!-- 첫번째 슬라이드 -->
 					<li class="slideitem">
-						<a>
-							<div id="product" onclick="">
-								<div id="productIMGpos">
-									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
-								</div>
-								<div id="productName">
-									<span>교복 마이</span>
-								</div>
-								<div id="productPrice">
-									<span>20,000</span><span style="font-size:14px;">원</span>
-								</div>
-								<div id="productCategory">
-									<span>옷>교복</span>
-								</div>
-								<div id="productState">
-									<span>상태: 상</span>
-								</div>
-								<script> state()</script>
+						<a id="product" href="../page4/productpage.html">
+							<div id="productIMGpos">
+								<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 							</div>
+							<div id="productName">
+								<span>교복 마이</span>
+							</div>
+							<div id="productPrice">
+								<span>20,000</span><span style="font-size:14px;">원</span>
+							</div>
+							<div id="productCategory">
+								<span>옷>교복</span>
+							</div>
+							<div id="productState">
+								<span>상태: 상</span>
+							</div>
+							<script> state(287, 19, 377, 7.5)</script>
 						</a>
-						<a>
-							<div id="product">
-								<div id="productIMGpos">
-									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
-								</div>
-								<div id="productName">
-									<span>교복 마이</span>
-								</div>
-								<div id="productPrice">
-									<span>20,000</span><span style="font-size:14px;">원</span>
-								</div>
-								<div id="productCategory">
-									<span>옷>교복</span>
-								</div>
-								<div id="productState">
-									<span>상태: 상</span>
-								</div>
-								<script> state()</script>
+						<a id="product" href="../page4/productpage.html">
+							<div id="productIMGpos">
+								<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 							</div>
+							<div id="productName">
+								<span>교복 마이</span>
+							</div>
+							<div id="productPrice">
+								<span>20,000</span><span style="font-size:14px;">원</span>
+							</div>
+							<div id="productCategory">
+								<span>옷>교복</span>
+							</div>
+							<div id="productState">
+								<span>상태: 상</span>
+							</div>
+							<script> state(287, 19, 377, 7.5)</script>
 						</a>
-						<a>
-							<div id="product">
-								<div id="productIMGpos">
-									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
-								</div>
-								<div id="productName">
-									<span>교복 마이</span>
-								</div>
-								<div id="productPrice">
-									<span>20,000</span><span style="font-size:14px;">원</span>
-								</div>
-								<div id="productCategory">
-									<span>옷>교복</span>
-								</div>
-								<div id="productState">
-									<span>상태: 상</span>
-								</div>
-								<script> state()</script>
+						<a id="product" href="../page4/productpage.html">
+							<div id="productIMGpos">
+								<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 							</div>
+							<div id="productName">
+								<span>교복 마이</span>
+							</div>
+							<div id="productPrice">
+								<span>20,000</span><span style="font-size:14px;">원</span>
+							</div>
+							<div id="productCategory">
+								<span>옷>교복</span>
+							</div>
+							<div id="productState">
+								<span>상태: 상</span>
+							</div>
+							<script> state(287, 19, 377, 7.5)</script>
 						</a>
 					</li>
+					<!-- 두번째 슬라이드 -->
 					<li class="slideitem">
-						<a>
-							<div id="product" onclick="">
-								<div id="productIMGpos">
-									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
-								</div>
-								<div id="productName">
-									<span>교복 마이</span>
-								</div>
-								<div id="productPrice">
-									<span>20,000</span><span style="font-size:14px;">원</span>
-								</div>
-								<div id="productCategory">
-									<span>옷>교복</span>
-								</div>
-								<div id="productState">
-									<span>상태: 상</span>
-								</div>
-								<script> state()</script>
+						<a id="product" href="../page4/productpage.html">
+							<div id="productIMGpos">
+								<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 							</div>
+							<div id="productName">
+								<span>교복 마이</span>
+							</div>
+							<div id="productPrice">
+								<span>20,000</span><span style="font-size:14px;">원</span>
+							</div>
+							<div id="productCategory">
+								<span>옷>교복</span>
+							</div>
+							<div id="productState">
+								<span>상태: 상</span>
+							</div>
+							<script> state(287, 19, 377, 7.5)</script>
 						</a>
-						<a>
-							<div id="product">
-								<div id="productIMGpos">
-									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
-								</div>
-								<div id="productName">
-									<span>교복 마이</span>
-								</div>
-								<div id="productPrice">
-									<span>20,000</span><span style="font-size:14px;">원</span>
-								</div>
-								<div id="productCategory">
-									<span>옷>교복</span>
-								</div>
-								<div id="productState">
-									<span>상태: 상</span>
-								</div>
-								<script> state()</script>
+						<a id="product" href="../page4/productpage.html">
+							<div id="productIMGpos">
+								<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 							</div>
+							<div id="productName">
+								<span>교복 마이</span>
+							</div>
+							<div id="productPrice">
+								<span>20,000</span><span style="font-size:14px;">원</span>
+							</div>
+							<div id="productCategory">
+								<span>옷>교복</span>
+							</div>
+							<div id="productState">
+								<span>상태: 상</span>
+							</div>
+							<script> state(287, 19, 377, 7.5)</script>
 						</a>
-						<a>
-							<div id="product">
-								<div id="productIMGpos">
-									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
-								</div>
-								<div id="productName">
-									<span>교복 마이</span>
-								</div>
-								<div id="productPrice">
-									<span>20,000</span><span style="font-size:14px;">원</span>
-								</div>
-								<div id="productCategory">
-									<span>옷>교복</span>
-								</div>
-								<div id="productState">
-									<span>상태: 상</span>
-								</div>
-								<script> state()</script>
+						<a id="product" href="../page4/productpage.html">
+							<div id="productIMGpos">
+								<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 							</div>
+							<div id="productName">
+								<span>교복 마이</span>
+							</div>
+							<div id="productPrice">
+								<span>20,000</span><span style="font-size:14px;">원</span>
+							</div>
+							<div id="productCategory">
+								<span>옷>교복</span>
+							</div>
+							<div id="productState">
+								<span>상태: 상</span>
+							</div>
+							<script> state(287, 19, 377, 7.5)</script>
 						</a>
 					</li>
+					<!-- 세번째 슬라이드 -->
 					<li class="slideitem">
-						<a>
-							<div id="product" onclick="">
-								<div id="productIMGpos">
-									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
-								</div>
-								<div id="productName">
-									<span>교복 마이</span>
-								</div>
-								<div id="productPrice">
-									<span>20,000</span><span style="font-size:14px;">원</span>
-								</div>
-								<div id="productCategory">
-									<span>옷>교복</span>
-								</div>
-								<div id="productState">
-									<span>상태: 상</span>
-								</div>
-								<script> state()</script>
+						<a id="product" href="../page4/productpage.html">
+							<div id="productIMGpos">
+								<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 							</div>
-						</a>
-						<a style>
-							<div id="product">
-								<div id="productIMGpos">
-									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
-								</div>
-								<div id="productName">
-									<span>교복 마이</span>
-								</div>
-								<div id="productPrice">
-									<span>20,000</span><span style="font-size:14px;">원</span>
-								</div>
-								<div id="productCategory">
-									<span>옷>교복</span>
-								</div>
-								<div id="productState">
-									<span>상태: 상</span>
-								</div>
-								<script> state()</script>
+							<div id="productName">
+								<span>교복 마이</span>
 							</div>
-						</a>
-						<a>
-							<div id="product">
-								<div id="productIMGpos">
-									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
-								</div>
-								<div id="productName">
-									<span>교복 마이</span>
-								</div>
-								<div id="productPrice">
-									<span>20,000</span><span style="font-size:14px;">원</span>
-								</div>
-								<div id="productCategory">
-									<span>옷>교복</span>
-								</div>
-								<div id="productState">
-									<span>상태: 상</span>
-								</div>
-								<script> state()</script>
+							<div id="productPrice">
+								<span>20,000</span><span style="font-size:14px;">원</span>
 							</div>
-						</a>
-					</li>
-					<li class="slideitem">
-						<a>
-							<div id="product" onclick="">
-								<div id="productIMGpos">
-									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
-								</div>
-								<div id="productName">
-									<span>교복 마이</span>
-								</div>
-								<div id="productPrice">
-									<span>20,000</span><span style="font-size:14px;">원</span>
-								</div>
-								<div id="productCategory">
-									<span>옷>교복</span>
-								</div>
-								<div id="productState">
-									<span>상태: 상</span>
-								</div>
-								<script> state()</script>
+							<div id="productCategory">
+								<span>옷>교복</span>
 							</div>
-						</a>
-						<a style>
-							<div id="product">
-								<div id="productIMGpos">
-									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
-								</div>
-								<div id="productName">
-									<span>교복 마이</span>
-								</div>
-								<div id="productPrice">
-									<span>20,000</span><span style="font-size:14px;">원</span>
-								</div>
-								<div id="productCategory">
-									<span>옷>교복</span>
-								</div>
-								<div id="productState">
-									<span>상태: 상</span>
-								</div>
-								<script> state()</script>
+							<div id="productState">
+								<span>상태: 상</span>
 							</div>
-						</a>
-						<a>
-							<div id="product">
-								<div id="productIMGpos">
-									<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
-								</div>
-								<div id="productName">
-									<span>교복 마이</span>
-								</div>
-								<div id="productPrice">
-									<span>20,000</span><span style="font-size:14px;">원</span>
-								</div>
-								<div id="productCategory">
-									<span>옷>교복</span>
-								</div>
-								<div id="productState">
-									<span>상태: 상</span>
-								</div>
-								<script> state()</script>
+							<script> state(287, 19, 377, 7.5)</script>
+						</a>				
+						<a id="product" href="../page4/productpage.html">
+							<div id="productIMGpos">
+								<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 							</div>
+							<div id="productName">
+								<span>교복 마이</span>
+							</div>
+							<div id="productPrice">
+								<span>20,000</span><span style="font-size:14px;">원</span>
+							</div>
+							<div id="productCategory">
+								<span>옷>교복</span>
+							</div>
+							<div id="productState">
+								<span>상태: 상</span>
+							</div>
+							<script> state(287, 19, 377, 7.5)</script>
+						</a>		
+						<a id="product" href="../page4/productpage.html">
+							<div id="productIMGpos">
+								<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+							</div>
+							<div id="productName">
+								<span>교복 마이</span>
+							</div>
+							<div id="productPrice">
+								<span>20,000</span><span style="font-size:14px;">원</span>
+							</div>
+							<div id="productCategory">
+								<span>옷>교복</span>
+							</div>
+							<div id="productState">
+								<span>상태: 상</span>
+							</div>
+							<script> state(287, 19, 377, 7.5)</script>
 						</a>
 					</li>
 				</ul>
+				<!-- 슬라이드 옆 화살표와 컨트롤 -->
 				<div class="slide-control">
 					<div class="control01">
 						<label for="slide03" class="prev"></label>
@@ -624,9 +527,11 @@
 				</div>
 			</div>
 
+			<!-- 미림마켓 소식지 -->
 			<div id="titleFONT">
 				<span>미림마켓 소식지</span>
 			</div>
+			<!-- 소식지1 -->
 			<div id="newsletter" onclick="location.href='https://github.com/alsals126/mirimmarket_FRONT'">
 				<img src="../img/puppy.jpg" class="newsletterPHOTO1">
 				<svg class="newsletterPHOTO2">
@@ -637,6 +542,7 @@
 					<span>미림마켓 개발자</span><span style="color:rgba(0,0,0,1);">가 들려주는<br/>개발 비하인드 스토리 #1</span>
 				</div>
 			</div>
+			<!-- 소식지2 -->
 			<div id="newsletter" onclick="location.href='https://pbs.twimg.com/media/D8b6XiaUIAAY1zG.jpg'">
 				<img src="../img/puppy.jpg" class="newsletterPHOTO1" style="left: 975px; top: 1688px;">
 				<svg class="newsletterPHOTO2" style="left: 975px;">
@@ -651,9 +557,11 @@
 				<span>더보기 ></span>
 			</div>
 				
+			<!-- 전체 상품 -->
 			<div id="titleFONT" style="top: 2229px; width: 129px;">
 				<span>전체 상품</span>
 			</div>
+			<!-- 셀렉트 박스 -->
 			<select class="selectbox">
 				<option selected>최신순</option>
 				<option>인기순</option>
@@ -664,11 +572,12 @@
 				<path id="selectboxARROW" d="M 7.663029670715332 1.280071258544922 C 8.057735443115234 0.6764036417007446 8.942263603210449 0.6764036417007446 9.336969375610352 1.280071139335632 L 15.98833656311035 11.45275020599365 C 16.4232120513916 12.11785411834717 15.94602394104004 13 15.1513671875 13 L 1.848632454872131 13 C 1.053975701332092 13.00000095367432 0.576787531375885 12.11785411834717 1.011662840843201 11.45275115966797 Z">
 				</path>
 			</svg>
+			<!-- 전체상품 나열 -->
 			<div id="allproduct">
 				<div id="allproductROW">
-					<div id="product" style="z-index: 1;">
+					<a id="product" href="../page4/productpage.html">
 						<div id="productIMGpos">
-							<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+							<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 						</div>
 						<div id="productName">
 							<span>교복 마이</span>
@@ -682,11 +591,11 @@
 						<div id="productState">
 							<span>상태: 상</span>
 						</div>
-						<script> state()</script>
-					</div>
-					<div id="product" style="z-index: 1;">
+						<script> state(287, 19, 377, 7.5)</script>
+					</a>
+					<a id="product" href="../page4/productpage.html">
 						<div id="productIMGpos">
-							<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+							<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 						</div>
 						<div id="productName">
 							<span>교복 마이</span>
@@ -700,11 +609,11 @@
 						<div id="productState">
 							<span>상태: 상</span>
 						</div>
-						<script> state()</script>
-					</div>
-					<div id="product" style="z-index: 1;">
+						<script> state(287, 19, 377, 7.5)</script>
+					</a>
+					<a id="product" href="../page4/productpage.html">
 						<div id="productIMGpos">
-							<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+							<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 						</div>
 						<div id="productName">
 							<span>교복 마이</span>
@@ -718,13 +627,13 @@
 						<div id="productState">
 							<span>상태: 상</span>
 						</div>
-						<script> state()</script>
-					</div>
-				</div>
+						<script> state(287, 19, 377, 7.5)</script>
+					</a>
+				</div>					
 				<div id="allproductROW" style="top: 445px;">
-					<div id="product" style="z-index: 1;">
+					<a id="product" href="../page4/productpage.html">
 						<div id="productIMGpos">
-							<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+							<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 						</div>
 						<div id="productName">
 							<span>교복 마이</span>
@@ -738,11 +647,11 @@
 						<div id="productState">
 							<span>상태: 상</span>
 						</div>
-						<script> state()</script>
-					</div>
-					<div id="product" style="z-index: 1;">
+						<script> state(287, 19, 377, 7.5)</script>
+					</a>
+					<a id="product" href="../page4/productpage.html">
 						<div id="productIMGpos">
-							<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+							<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 						</div>
 						<div id="productName">
 							<span>교복 마이</span>
@@ -756,11 +665,11 @@
 						<div id="productState">
 							<span>상태: 상</span>
 						</div>
-						<script> state()</script>
-					</div>
-					<div id="product" style="z-index: 1;">
+						<script> state(287, 19, 377, 7.5)</script>
+					</a>
+					<a id="product" href="../page4/productpage.html">
 						<div id="productIMGpos">
-							<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+							<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 						</div>
 						<div id="productName">
 							<span>교복 마이</span>
@@ -774,13 +683,13 @@
 						<div id="productState">
 							<span>상태: 상</span>
 						</div>
-						<script> state()</script>
-					</div>
+						<script> state(287, 19, 377, 7.5)</script>
+					</a>
 				</div>
 				<div id="allproductROW" style="top: 890px;">
-					<div id="product" style="z-index: 1;">
+					<a id="product" href="../page4/productpage.html">
 						<div id="productIMGpos">
-							<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+							<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 						</div>
 						<div id="productName">
 							<span>교복 마이</span>
@@ -794,11 +703,11 @@
 						<div id="productState">
 							<span>상태: 상</span>
 						</div>
-						<script> state()</script>
-					</div>
-					<div id="product" style="z-index: 1;">
+						<script> state(287, 19, 377, 7.5)</script>
+					</a>
+					<a id="product" href="../page4/productpage.html">
 						<div id="productIMGpos">
-							<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+							<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 						</div>
 						<div id="productName">
 							<span>교복 마이</span>
@@ -812,11 +721,11 @@
 						<div id="productState">
 							<span>상태: 상</span>
 						</div>
-						<script> state()</script>
-					</div>
-					<div id="product" style="z-index: 1;">
+						<script> state(287, 19, 377, 7.5)</script>
+					</a>
+					<a id="product" href="../page4/productpage.html">
 						<div id="productIMGpos">
-							<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+							<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 						</div>
 						<div id="productName">
 							<span>교복 마이</span>
@@ -830,13 +739,13 @@
 						<div id="productState">
 							<span>상태: 상</span>
 						</div>
-						<script> state()</script>
-					</div>
+						<script> state(287, 19, 377, 7.5)</script>
+					</a>
 				</div>
 				<div id="allproductROW" style="top: 1335px;">
-					<div id="product" style="z-index: 1;">
+					<a id="product" href="../page4/productpage.html">
 						<div id="productIMGpos">
-							<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+							<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 						</div>
 						<div id="productName">
 							<span>교복 마이</span>
@@ -850,11 +759,11 @@
 						<div id="productState">
 							<span>상태: 상</span>
 						</div>
-						<script> state()</script>
-					</div>
-					<div id="product" style="z-index: 1;">
+						<script> state(287, 19, 377, 7.5)</script>
+					</a>
+					<a id="product" href="../page4/productpage.html">
 						<div id="productIMGpos">
-							<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+							<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 						</div>
 						<div id="productName">
 							<span>교복 마이</span>
@@ -868,11 +777,11 @@
 						<div id="productState">
 							<span>상태: 상</span>
 						</div>
-						<script> state()</script>
-					</div>
-					<div id="product" style="z-index: 1;">
+						<script> state(287, 19, 377, 7.5)</script>
+					</a>
+					<a id="product" href="../page4/productpage.html">
 						<div id="productIMGpos">
-							<img id="productIMG" src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
+							<img src="../img/puppy.jpg" onerror="this.src = '../img/noimage.PNG'"/>
 						</div>
 						<div id="productName">
 							<span>교복 마이</span>
@@ -886,15 +795,16 @@
 						<div id="productState">
 							<span>상태: 상</span>
 						</div>
-						<script> state()</script>
-					</div>
+						<script> state(287, 19, 377, 7.5)</script>
+					</a>
 				</div>
-			</div>
+			</div>					
 
 			<div id="viewmoreFONT" onclick="location.href='#'"style="top: 4066px;">
 				<span>더보기 ></span>
 			</div>
-
+			
+			<!-- 하단바 -->
 			<svg class="bottom">
 				<rect id="bottom" rx="0" ry="0" x="0" y="0" width="1920" height="470">
 				</rect>
