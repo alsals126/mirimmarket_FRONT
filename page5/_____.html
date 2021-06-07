@@ -110,7 +110,7 @@
 		border-radius: 10px;
 		z-index: 1;
 	}
-	.categoryBOX{
+	.selectBOX{
 		cursor: pointer;
 		font-family: 'TmoneyRoundWind';
 		font-style: normal;
@@ -123,13 +123,13 @@
 		height: 50px;
 		background: rgba(255,255,255,0);
 	}
-	#categorySECTION select{
+	select{
 		border: 0;
 		appearance: none;
 		outline: 0;
 	}
-	.categoryBOX option{ font-size: 20px; }
-	.categoryARROW {
+	.selectBOX option{ font-size: 20px; }
+	.selectARROW {
 		fill: rgba(102,140,74,1);
 		position: absolute;
 		left: 160px;
@@ -157,52 +157,63 @@
 		background: rgba(255,255,255,0);
 		border-bottom: 2.5px solid rgba(102,140,74,1);
 	}
-	#__p {
-		opacity: 0.5;
-		left: 567px;
-		top: 510px;
+
+	#stateSECTION {
 		position: absolute;
-		overflow: visible;
-		width: 99px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: 'TmoneyRoundWind';
-		font-style: normal;
-		font-weight: normal;
-		font-size: 30px;
-		color: rgba(69,69,69,1);
+		left: 102px;
+		top: 980px;
+		border: 2px solid rgba(242,197,61,1);
+		border-radius: 10px;
+		z-index: 1;
 	}
-	
-	#__r {
-		opacity: 0.5;
-		left: 567px;
-		top: 657px;
+
+	#regisTEXTAREA{
 		position: absolute;
-		overflow: visible;
-		width: 129px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: 'TmoneyRoundWind';
-		font-style: normal;
-		font-weight: normal;
-		font-size: 30px;
-		color: rgba(69,69,69,1);
-	}
-	#ID1_ {
-		left: 567px;
-		top: 576px;
-		position: absolute;
-		overflow: visible;
-		width: 141px;
-		white-space: nowrap;
-		line-height: 30px;
-		margin-top: -3px;
-		text-align: left;
+		left: 102px;
+		top: 1132px;
+		width: 890px;
+		height: 237px;
+		padding: 5px 30px;
 		font-family: 'TmoneyRoundWind';
 		font-style: normal;
 		font-weight: normal;
 		font-size: 24px;
-		color: rgba(0,0,0,1);
+		outline: 0;
+		resize: none;
+		overflow: hidden;
+		border: 2.5px solid rgba(242,197,61,1);
+		border-radius: 40px;
+	}
+
+	hr{
+		position: absolute;
+		top: 1425px;
+		left: 70px;
+		width: 950px;
+		border: 0.5px solid rgba(0,0,0,0.1);
+	}
+
+	.gradeSECTION{
+		position: absolute;
+		top: 1550px;
+		left: 100px;
+		font-family: 'TmoneyRoundWind';
+		font-size: 24px;
+	}
+	input[type='radio']{
+		appearance: none;
+		width: 33px;
+		height: 33px;
+		border-radius: 100%;
+		background-color: rgba(255,255,255,1);
+		border: 2px solid rgba(0, 0, 0, 0.5);
+	}
+	input[type="radio"]:checked{
+		background-color: rgba(102,140,74,1);
+	}
+	label{
+		position: relative;
+		top: -8px;
 	}
 	#_-_ {
 		left: 583px;
@@ -1264,7 +1275,7 @@
 			</ul>
 		</div>
 	</div>
-<div>
+
 	<div id="titleFONT1">
 		<span>상품 등록</span>
 	</div>
@@ -1276,7 +1287,7 @@
 		<div id="regisFONT1">카테고리</div>
 		<div id="regisFONT2">*</div>
 		<div id="categorySECTION">
-			<select class="categoryBOX">
+			<select class="selectBOX">
 				<optgroup label="CLOTHES">
 					<option>교복</option>
 					<option>체육복</option>
@@ -1295,7 +1306,7 @@
 					<option>기타상품</option>
 				</optgroup>
 			</select>
-			<svg class="categoryARROW">
+			<svg class="selectARROW">
 				<path d="M 10.28501415252686 2.858309507369995 C 11.06182098388672 1.563631415367126 12.93817901611328 1.563631415367126 13.71498489379883 2.858309507369995 L 22.1826057434082 16.97100830078125 C 22.9824333190918 18.30405807495117 22.02220726013184 19.99999809265137 20.46761894226074 20 L 3.5323805809021 20 C 1.977791786193848 19.99999809265137 1.017565488815308 18.30405807495117 1.817394971847534 16.97100830078125 Z">
 				</path>
 			</svg>
@@ -1317,107 +1328,67 @@
 		<div id="regisFONT2" style="top: 782px; left: 165px;">*</div>
 		<input type="text" id="regisINPUT" style="border-color: rgba(242,197,61,1); top: 832px;">
 		<div id="regisFONT3" style="top: 840px;">개</div>
+		<div id="regisFONT1" style="font-size: 16px; top: 848px; left: 290px;">
+			<span>1~1000 사이의 숫자로 입력해 주세요.</span>
+		</div>
 
 		<div id="regisFONT1" style="top: 919px;">상태</div>
 		<div id="regisFONT2" style="top: 929px; left: 165px;">*</div>
+		<div id="stateSECTION">
+			<select class="selectBOX">
+				<option>최상</option>
+				<option>상</option>
+				<option selected>중</option>
+				<option>하</option>
+				<option>최하</option>
+			</select>
+			<svg class="selectARROW" style="fill: rgba(242,197,61,1);">
+				<path d="M 10.28501415252686 2.858309507369995 C 11.06182098388672 1.563631415367126 12.93817901611328 1.563631415367126 13.71498489379883 2.858309507369995 L 22.1826057434082 16.97100830078125 C 22.9824333190918 18.30405807495117 22.02220726013184 19.99999809265137 20.46761894226074 20 L 3.5323805809021 20 C 1.977791786193848 19.99999809265137 1.017565488815308 18.30405807495117 1.817394971847534 16.97100830078125 Z">
+				</path>
+			</svg>
+		</div>
 
-	</div>
-	<svg class="_15" viewBox="0 0 204 48">
-		<path id="_15" d="M 10 0.9795918464660645 L 194 0 C 199.5228424072266 0 204 4.385781764984131 204 9.795918464660645 L 204 38.20408248901367 C 204 43.61421585083008 199.5228424072266 48 194 48 L 10 48 C 4.477152347564697 48 0 43.61421585083008 0 38.20408248901367 L 0 9.795918464660645 C 0 4.385781764984131 4.477152347564697 0.9795918464660645 10 0.9795918464660645 Z">
-		</path>
-	</svg>
-	<div id="_w">
-		<span>선택</span>
-	</div>
-	<div id="_bd">
-		<span>*</span>
-	</div>
-	
-	<svg class="_5" viewBox="0 0 24 20">
-		<path id="_5" d="M 10.28501415252686 2.858309507369995 C 11.06182098388672 1.563631415367126 12.93817901611328 1.563631415367126 13.71498489379883 2.858309507369995 L 22.1826057434082 16.97100830078125 C 22.9824333190918 18.30405807495117 22.02220726013184 19.99999809265137 20.46761894226074 20 L 3.5323805809021 20 C 1.977791786193848 19.99999809265137 1.017565488815308 18.30405807495117 1.817394971847534 16.97100830078125 Z">
-		</path>
-	</svg>
-	<div id="__">
-		<span>소비자 학년</span>
+		<div id="regisFONT1" style="top: 1066px;">상세 설명</div>
+		<div id="regisFONT2" style="top: 1076px; left: 228px;">*</div>
+		<textarea id="regisTEXTAREA" rows="4" cols="20"></textarea>
+		<hr>
+
+		<div id="regisFONT1" style="top: 1485px;">소비자 학년</div>
+		<div id="regisFONT2" style="top: 1495px; left: 260px;">*</div>
+		<div class="gradeSECTION">
+			<input type="radio" name="grade" value="nothing"> <label>상관없음</label>
+			<input type="radio" name="grade" value="freshman" checked> <label>1학년</label>
+			<input type="radio" name="grade" value="sophomore"> <label>2학년</label>
+			<input type="radio" name="grade" value="junior"> <label>3학년</label>
+		</div>
+		
+		
+
 	</div>
 	<div id="__ba">
 		<span>익명 여부</span>
 	</div>
-	<svg class="_17" viewBox="0 0 888 240">
-		<path id="_17" d="M 43.52941131591797 4.89795970916748 L 844.4705810546875 0 C 868.5111694335938 0 888 21.92890739440918 888 48.97959518432617 L 888 191.0204162597656 C 888 218.0710906982422 868.5111694335938 240.0000152587891 844.4705810546875 240.0000152587891 L 43.52941131591797 240.0000152587891 C 19.4887809753418 240.0000152587891 0 218.0710906982422 0 191.0204162597656 L 0 48.97959518432617 C 0 21.92890739440918 19.4887809753418 4.89795970916748 43.52941131591797 4.89795970916748 Z">
-		</path>
-	</svg>
-	<svg class="_6" viewBox="0 0 24 20">
-		<path id="_6" d="M 10.28501415252686 2.858309507369995 C 11.06182098388672 1.563631415367126 12.93817901611328 1.563631415367126 13.71498489379883 2.858309507369995 L 22.1826057434082 16.97100830078125 C 22.9824333190918 18.30405807495117 22.02220726013184 19.99999809265137 20.46761894226074 20 L 3.5323805809021 20 C 1.977791786193848 19.99999809265137 1.017565488815308 18.30405807495117 1.817394971847534 16.97100830078125 Z">
-		</path>
-	</svg>
-	<div id="__bj">
-		<span>상관 없음</span>
-	</div>
 	<div id="_bk">
 		<span>실명</span>
-	</div>
-	<div id="ID1">
-		<span>1학년</span>
 	</div>
 	<div id="_bm">
 		<span>익명</span>
 	</div>
-	<div id="ID2">
-		<span>2학년</span>
-	</div>
-	<div id="ID3">
-		<span>3학년</span>
-	</div>
-	<div id="__bs">
-		<span>상세 설명</span>
-	</div>
-	
-	<div id="ID11000____">
-		<span>1~1000 사이의 숫자로 입력해 주세요.</span>
-	</div>
-	<svg class="_97">
-		<ellipse id="_97" rx="15" ry="15" cx="15" cy="15">
-		</ellipse>
-	</svg>
 	<svg class="_106">
 		<ellipse id="_106" rx="15" ry="15" cx="15" cy="15">
-		</ellipse>
-	</svg>
-	<svg class="_98">
-		<ellipse id="_98" rx="15" ry="15" cx="15" cy="15">
 		</ellipse>
 	</svg>
 	<svg class="_104">
 		<ellipse id="_104" rx="15" ry="15" cx="15" cy="15">
 		</ellipse>
 	</svg>
-	<svg class="_99">
-		<ellipse id="_99" rx="15" ry="15" cx="15" cy="15">
-		</ellipse>
-	</svg>
-	<svg class="_100">
-		<ellipse id="_100" rx="15" ry="15" cx="15" cy="15">
-		</ellipse>
-	</svg>
-	<svg class="_101">
-		<ellipse id="_101" rx="11" ry="11" cx="11" cy="11">
-		</ellipse>
-	</svg>
 	<svg class="_105">
 		<ellipse id="_105" rx="11" ry="11" cx="11" cy="11">
 		</ellipse>
 	</svg>
-	<div id="_b">
-		<span>*</span>
-	</div>
 	<div id="_ca">
 		<span>*</span>
 	</div>
-	<svg class="_16" viewBox="0 0 948 1">
-		<path id="_16" d="M 0 0 L 948 0">
-		</path>
-	</svg>
 	<svg class="_34">
 		<rect id="_34" rx="0" ry="0" x="0" y="0" width="174" height="174">
 		</rect>
@@ -1440,6 +1411,5 @@
 	<div id="_cc">
 		<span>취소하기</span>
 	</div>
-</div>
 </body>
 </html>
