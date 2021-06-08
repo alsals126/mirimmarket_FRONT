@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script>
+            const browseBtn = document.querySelector('.browse-btn');
+const realInput = document.querySelector('#real-input');
+
+browseBtn.addEventListener('click',()=>{
+	realInput.click();
+});
+        </script>
+    </head>
+    <body>
+        <input type="file" id="real-input" class="image_inputType_file" accept="img/*" required multiple>
+<button class="browse-btn">사진업로드</botton>
+    </body>
+</html>
