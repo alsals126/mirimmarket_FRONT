@@ -6,32 +6,66 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>썸네일 만들기</title>
         <style>
-            input[type=file]{
-                
+            .inputIMG img, .input_img_label img{
+                width: 174px;
+                height: 174px;
             }
+            .inputIMG img{
+
+            }
+            /*
             #image_container img{
                 width: 150px;
                 height: 150px;
                 border: 2px solid rgba(255, 255, 255, 1);
-            }
+            }*/
         </style>
     </head> 
     <body> 
-        <input type="file" id="image" accept="image/*" onchange="setThumbnail(event);" multiple/>
+        <div class="inputIMG">
+            <button>&times;</button>
+        </div>
+        <label class="input_img_label" for="input_file">
+            <img src="img/addPhoto.png">
+        </label>
+        <input type="file" id="input_file" style="display:none"  accept="image/*" onchange="setThumbnail(event);" multiple/> 
+        
+
+
+
+
+
+        <!--
+        <input type="file" id="image" accept="image/*" onchange="setThumbnail(event);" multiple/>-->
         <div id="image_container"></div> 
         <script> 
+            /*
             function setThumbnail(event) {
-                for (var image of event.target.files) {
+                for (var input_file of event.target.files) {
                     var reader = new FileReader(); 
                     reader.onload = function(event) { 
                         var img = document.createElement("img"); 
                         img.setAttribute("src", event.target.result); 
                         document.querySelector("div#image_container").appendChild(img); 
                     }; 
-                    console.log(image); 
-                    reader.readAsDataURL(image); 
+                    console.log(input_file); 
+                    reader.readAsDataURL(input_file); 
                 }
-            } 
+            } */
+            function setThumbnail(event) {
+                for (var input_file of event.target.files) {
+                    var reader = new FileReader(); 
+                    reader.onload = function(event) { 
+                        var img = document.createElement("img"); 
+                        img.setAttribute("src", event.target.result); 
+                        document.querySelector(".inputIMG").appendChild(img); 
+
+                        
+                    }; 
+                    console.log(input_file); 
+                    reader.readAsDataURL(input_file); 
+                }
+            }
         </script> 
     </body> 
 </html>
