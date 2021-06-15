@@ -6,13 +6,31 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>썸네일 만들기</title>
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+            * {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
             .inputIMG img, .input_img_label img{
                 width: 174px;
                 height: 174px;
             }
-            .inputIMG img{
-
+            span{position: relative; height: 174px; display: inline-block;border: 1px solid rgba(0, 0, 0, 0.4); border-radius: 10px; margin: 10px;}
+            span button {
+                position: absolute;
+                padding: 0px;
+                right: 5px;
+                top: 3px;
+                border: none;
+                background: none;
+                font-family: 'Nanum Myeongjo', serif;
+                font-size: 30px;
+                
+                outline: none;
             }
+            
             /*
             #image_container img{
                 width: 150px;
@@ -21,13 +39,12 @@
             }*/
         </style>
     </head> 
-    <body> 
-        <div class="inputIMG">
-            <button>&times;</button>
-        </div>
+    <body>
         <label class="input_img_label" for="input_file">
             <img src="img/addPhoto.png">
         </label>
+        <div class="inputIMG"></div>
+        
         <input type="file" id="input_file" style="display:none"  accept="image/*" onchange="setThumbnail(event);" multiple/> 
         
 
@@ -37,7 +54,7 @@
 
         <!--
         <input type="file" id="image" accept="image/*" onchange="setThumbnail(event);" multiple/>-->
-        <div id="image_container"></div> 
+        
         <script> 
             /*
             function setThumbnail(event) {
@@ -56,15 +73,38 @@
                 for (var input_file of event.target.files) {
                     var reader = new FileReader(); 
                     reader.onload = function(event) { 
+                        var span = document.createElement("span");
+                        document.querySelector(".inputIMG").appendChild(span);
+
+                        var delBTN = document.createElement("button");
+                        delBTN.setAttribute("onclick", "delIMG()"); 
+                        delBTN.innerHTML = "&times";
+                        span.appendChild(delBTN); 
+
                         var img = document.createElement("img"); 
                         img.setAttribute("src", event.target.result); 
-                        document.querySelector(".inputIMG").appendChild(img); 
+                        span.appendChild(img); 
 
                         
                     }; 
-                    console.log(input_file); 
+                    //console.log(input_file); 
                     reader.readAsDataURL(input_file); 
                 }
+            }
+            /*
+            document.querySelector('span button').addEventListener('click', function(e){
+                
+                let dellink = e.target;
+                let preview = dellink.previousElementSibling;
+                preview.src = ''; // 썸네일 이미지 src 데이터 해제
+                document.querySelector('.dellink').style.display = 'none';
+                console.log("아아");
+            });
+            */
+            function delIMG(){
+                var span = event.target.parentNode;
+                span.parentNode.removeChild(span);
+                console.log(parent);
             }
         </script> 
     </body> 
