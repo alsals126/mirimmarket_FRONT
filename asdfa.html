@@ -13,6 +13,9 @@
 		box-sizing: border-box;
 		border: none;
 	}
+    label{
+        display: inline;
+    }
             .inputIMG img, .input_img_label img{
                 width: 174px;
                 height: 174px;
@@ -70,26 +73,29 @@
                 }
             } */
             function setThumbnail(event) {
-                for (var input_file of event.target.files) {
-                    var reader = new FileReader(); 
-                    reader.onload = function(event) { 
-                        var span = document.createElement("span");
-                        document.querySelector(".inputIMG").appendChild(span);
+                var len = document.querySelector(".inputIMG").childNodes.length + event.target.files.length;
+                
+                if(event.target.files.length < 5 && len < 5)
+                    for (var input_file of event.target.files) {
+                        var reader = new FileReader(); 
+                        reader.onload = function(event) { 
+                            var span = document.createElement("span");
+                            document.querySelector(".inputIMG").appendChild(span);
 
-                        var delBTN = document.createElement("button");
-                        delBTN.setAttribute("onclick", "delIMG()"); 
-                        delBTN.innerHTML = "&times";
-                        span.appendChild(delBTN); 
+                            var delBTN = document.createElement("button");
+                            delBTN.setAttribute("onclick", "delIMG()"); 
+                            delBTN.innerHTML = "&times";
+                            span.appendChild(delBTN); 
 
-                        var img = document.createElement("img"); 
-                        img.setAttribute("src", event.target.result); 
-                        span.appendChild(img); 
-
-                        
-                    }; 
-                    //console.log(input_file); 
-                    reader.readAsDataURL(input_file); 
-                }
+                            var img = document.createElement("img"); 
+                            img.setAttribute("src", event.target.result); 
+                            span.appendChild(img); 
+                        }; 
+                        //console.log(input_file); 
+                        reader.readAsDataURL(input_file); 
+                    }
+                else
+                    alert("이미지는 최대 4개까지만 가능합니다.");
             }
             /*
             document.querySelector('span button').addEventListener('click', function(e){
