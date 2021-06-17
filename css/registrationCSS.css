@@ -159,7 +159,7 @@ select{
     height: 174px; 
     display: inline-block;
     border: 1px solid rgba(0, 0, 0, 0.4); 
-    border-radius: 10px; 
+    border-radius: 8px; 
     margin-right: 10px;
 }
 span button {
@@ -235,34 +235,4 @@ button{
     height: 100px;
     top: 2000px;
     background: rgba(242,197,61,0);
-}
-
-#_34 {
-    fill: rgba(177,177,172,1);
-}
-._34 {
-    position: absolute;
-    overflow: visible;
-    width: 174px;
-    height: 174px;
-    left: 567px;
-    top: 718px;
-}
-#_7 {
-    fill: rgba(0,0,0,0);
-    stroke: rgba(255,255,255,1);
-    stroke-width: 2px;
-    stroke-linejoin: round;
-    stroke-linecap: round;
-    stroke-miterlimit: 4;
-    shape-rendering: auto;
-}
-._7 {
-    overflow: visible;
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    left: 642px;
-    top: 793px;
-    transform: matrix(1,0,0,1,0,0);
 }
