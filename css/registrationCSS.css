@@ -142,6 +142,7 @@ select{
     position: absolute;
     top: 412px;
     left: 100px;
+    width: 930px;
 }
 .inputIMG img, .input_img_label img{
     width: 174px;
