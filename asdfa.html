@@ -13,15 +13,21 @@
 		box-sizing: border-box;
 		border: none;
 	}
-    label{
-        display: inline;
-    }
             .inputIMG img, .input_img_label img{
                 width: 174px;
                 height: 174px;
             }
-            span{position: relative; height: 174px; display: inline-block;border: 1px solid rgba(0, 0, 0, 0.4); border-radius: 10px; margin: 10px;}
+            .input_img_label{cursor: pointer;}
+            span{
+                position: relative; 
+                height: 174px; 
+                display: inline-block;
+                border: 1px solid rgba(0, 0, 0, 0.4); 
+                border-radius: 10px; 
+                margin: 10px;
+            }
             span button {
+                cursor: pointer;
                 position: absolute;
                 padding: 0px;
                 right: 5px;
@@ -30,7 +36,6 @@
                 background: none;
                 font-family: 'Nanum Myeongjo', serif;
                 font-size: 30px;
-                
                 outline: none;
             }
             
@@ -76,7 +81,20 @@
                 var len = document.querySelector(".inputIMG").childNodes.length + event.target.files.length;
                 
                 if(event.target.files.length < 5 && len < 5)
-                    for (var input_file of event.target.files) {
+                    addFOR(event)
+                else if(event.target.files.length == 5 && len == 5){
+                    var reader = new FileReader(); 
+                    reader.onload = function(event) { 
+                        var label = document.getElementsByClassName("input_img_label");
+                        
+                    }; 
+                    reader.readAsDataURL(input_file); 
+                }
+                else
+                    alert("이미지는 최대 4개까지만 가능합니다.");
+            }
+            function addFOR(event){
+                for (var input_file of event.target.files) {
                         var reader = new FileReader(); 
                         reader.onload = function(event) { 
                             var span = document.createElement("span");
@@ -94,8 +112,6 @@
                         //console.log(input_file); 
                         reader.readAsDataURL(input_file); 
                     }
-                else
-                    alert("이미지는 최대 4개까지만 가능합니다.");
             }
             /*
             document.querySelector('span button').addEventListener('click', function(e){

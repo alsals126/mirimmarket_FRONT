@@ -9,6 +9,7 @@
     font-weight: normal;
     font-style: normal;
 }
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 #titleFONT1 {
     left: 465px;
     top: 197px;
@@ -135,6 +136,44 @@ select{
     outline: 0;
     background: rgba(255,255,255,0);
     border-bottom: 2.5px solid rgba(102,140,74,1);
+}
+
+#regisIMGsec{
+    position: absolute;
+    top: 412px;
+    left: 100px;
+}
+.inputIMG img, .input_img_label img{
+    width: 174px;
+    height: 174px;
+}
+.input_img_label{cursor: pointer;}
+.inputIMG{
+    position: absolute;
+    top: 0px;
+    left: 184px;
+}
+.inputIMG span{
+    position: relative; 
+    height: 174px; 
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.4); 
+    border-radius: 10px; 
+    margin-right: 10px;
+}
+span button {
+    cursor: pointer;
+    position: absolute;
+    height: auto;
+    width: auto;
+    right: 5px;
+    top: 3px;
+    border: none;
+    background: none;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 30px;
+    outline: none;
+    color: black;
 }
 
 #stateSECTION {

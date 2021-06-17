@@ -8,6 +8,7 @@
 
 		<link href="../css/top.css" rel="stylesheet" type="text/css" />
 		<link href="../css/registrationCSS.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="../js/registration.js"></script>
 	</head>
 	<body>
 		<!-- 상단바 -->
@@ -141,7 +142,11 @@
 			<div id="regisFONT1" style="top: 352px;">상품 사진</div>
 			<div id="regisFONT2" style="top: 362px; left: 230px;">*</div>
 			<div id="regisIMGsec">
-				
+				<label class="input_img_label" for="input_file">
+					<img src="../img/addPhoto.png">
+				</label>
+				<input type="file" id="input_file" style="display:none"  accept="image/*" onchange="addIMG(event);" multiple/> 
+				<div class="inputIMG"></div>
 			</div>
 
 			<!-- 가격 입력 -->
@@ -187,13 +192,5 @@
 		</form>
 		<div class="blank"></div> <!-- 맨 아래 공간 만들기 -->
 		
-		<svg class="_34">
-			<rect id="_34" rx="0" ry="0" x="0" y="0" width="174" height="174">
-			</rect>
-		</svg>
-		<svg class="_7" viewBox="-6323 -522 24 24">
-			<path id="_7" d="M -6310.99951171875 -509.999755859375 L -6323.00048828125 -509.999755859375 L -6310.99951171875 -509.999755859375 L -6310.99951171875 -522.00048828125 L -6310.99951171875 -509.999755859375 L -6299.00048828125 -509.999755859375 L -6310.99951171875 -509.999755859375 L -6310.99951171875 -498.0005798339844 L -6310.99951171875 -509.999755859375 Z">
-			</path>
-		</svg>
 	</body>
 </html>
