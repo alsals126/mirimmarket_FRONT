@@ -18,7 +18,6 @@
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-		font-family: 'TmoneyRoundWind';
 	}
 
 	.information{
@@ -29,10 +28,11 @@
 		width: 380px;
 		border-radius: 35px;
 		background-color: rgba(102,140,74,1);
+		filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.161));
 	}
 	.information img{
 		cursor: pointer;
-		position: relative;
+		position: absolute;
 		left: 59px;
 		top: 34px;
 		width: 80px;
@@ -40,41 +40,44 @@
 		border-radius: 70px;
 	}
 	.information input[type="text"]{
-		position: relative;
-		left: 73px;
-		top: 10px;
+		position: absolute;
+		left: 158px;
+		top: 47px;
 		width: 156px;
 		background: none;
 		border: none;
 		outline: none;
+		font-family: 'TmoneyRoundWind';
 		font-size: 40px;
 		color: rgba(255,255,255,1);
 	}
+	.informationFONT1{
+		position: absolute;
+		top: 68px;
+		left: 320px;
+		font-family: 'TmoneyRoundWind';
+		font-size: 26px;
+		color: rgba(255,255,255,1);
+	}
 	.information hr{
-		position: relative;
-		top: 47px;
+		position: absolute;
+		top: 140px;
 		left: 48px;
 		width: 280px;
 		border: 1px solid rgb(255, 255, 255);
-	}
-	.informationFONT1{
-		position: relative;
-		top: 15px;
-		left: 70px;
-		font-size: 26px;
-		color: rgba(255,255,255,1);
 	}
 	.informationFONT2{
 		position: absolute;
 		top: 150px;
 		left: 155px;
+		font-family: 'TmoneyRoundWind';
 		font-size: 22px;
 		color: rgba(255,255,255,0.7);
 	}
 	.information textarea{
-		position: relative;
+		position: absolute;
 		left: 50px;
-		top: 105px;
+		top: 190px;
 		width: 278px;
 		background: none;
 		border: none;
@@ -83,10 +86,63 @@
 		overflow: hidden;
 		text-align: center;
 		line-height: 40px;
+		font-family: 'TmoneyRoundWind';
 		font-size: 24px;
 		color: rgba(255,255,255,1);
 	}
 
+	.viewRegister{
+		position: absolute;
+		left: 770px;
+		top: 202px;
+		height: 380px;
+		width: 790px;
+		border-radius: 35px;
+		/*background-color: rgba(242,197,61,1);*/
+		z-index: 100;
+		filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.161));
+	}
+	.viewRegisterFONT{
+		position: absolute;
+		top: 15px;
+		left: 30px;
+		font-family: 'TmoneyRoundWind';
+		font-size: 36px;
+		color: rgba(255,255,255,1);
+	}
+	#productSEC{
+		/* position left top은 나중에 지우기 */
+		position: absolute;
+		top: 90px;
+		left: 30px;
+		width: 247px;
+		height: 247px;
+		border-radius: 30px;
+		background-color: rgb(255, 255, 255);
+		filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.161));
+	}
+	#productSEC:hover{
+		width: 230px;
+		height: 280px;
+		border-radius: 30px 0px 0px 30px;
+	}
+	#productSEC:hover img{ width: 180px; }
+	#productSEC:hover #productPRICE{ display: none; }
+	#productSEC img{
+		position: absolute;
+		top: 26px;
+		left: 22px;
+		width: 202px;
+		height: 170px;
+	}
+	#productTITLE, #productPRICE{
+		position: absolute;
+		top: 210px;
+		left: 22px;
+		width: 202px;
+		font-family: 'TmoneyRoundWind';
+		font-size: 14px;
+	}
 	#_____ {
 		left: 413px;
 		top: 411px;
@@ -376,20 +432,7 @@
 		left: 363px;
 		top: 610px;
 	}
-	#_bg {
-		left: 801px;
-		top: 222px;
-		position: absolute;
-		overflow: visible;
-		width: 104px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Tmoney RoundWind;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 36px;
-		color: rgba(255,255,255,1);
-	}
+	
 	#_bh {
 		left: 393px;
 		top: 630px;
@@ -1009,7 +1052,7 @@
 </script>
 </head>
 <body>
-	<!-- 상단 메뉴 -->
+	<!-- 상단바 -->
 	<div id="topMENU1">
 		<div id="topLOGO">
 			<img src="../img/logo_g.png" srcset="../img/logo_g.png 1x, ../img/logo_g@2x.png 2x">
@@ -1110,25 +1153,24 @@
 		<span class="informationFONT2">소개글</span>
 		<textarea rows="4" cols="12" spellcheck="false">나의 인생은&#10;언제나 빛날거야</textarea>
 	</div>
+
+	<!-- 등록글 -->
+	<div class="viewRegister">
+		<div class="viewRegisterFONT">등록글</div>
+		<div id="productSEC">
+			<img src="../img/noimage.PNG" id="productIMG">
+			<span id="productTITLE">교복 마이</span>
+			<span id="productPRICE" style="text-align: right;">20,000원</span>
+		</div>
+	</div>
 <div id="">
-	<svg class="_44">
-		<rect id="_44" rx="30" ry="30" x="0" y="0" width="786" height="378">
-		</rect>
-	</svg>
 	<svg class="_49">
 		<rect id="_49" rx="30" ry="30" x="0" y="0" width="1194" height="378">
 		</rect>
 	</svg>
-	<div id="_bg">
-		<span>등록글</span>
-	</div>
 	<div id="_bh">
 		<span>관심글</span>
 	</div>
-	<svg class="_45">
-		<rect id="_45" rx="30" ry="30" x="0" y="0" width="246" height="246">
-		</rect>
-	</svg>
 	<svg class="_53">
 		<rect id="_53" rx="30" ry="30" x="0" y="0" width="246" height="246">
 		</rect>
@@ -1153,9 +1195,6 @@
 		<path id="_4" d="M -12515.498046875 -240.9984436035156 L -12515.498046875 -240.9994049072266 L -12689.9990234375 -240.9994049072266 C -12694.048828125 -240.9994049072266 -12697.9775390625 -241.7926940917969 -12701.67578125 -243.3572540283203 C -12705.25 -244.8688201904297 -12708.4580078125 -247.0321044921875 -12711.212890625 -249.7870330810547 C -12713.9677734375 -252.5420989990234 -12716.130859375 -255.7505340576172 -12717.642578125 -259.3233032226563 C -12719.20703125 -263.0216064453125 -12720 -266.950439453125 -12720 -271.0006713867188 L -12720 -456.9999694824219 C -12720 -461.0502319335938 -12719.20703125 -464.9790344238281 -12717.642578125 -468.6772766113281 C -12716.130859375 -472.2500610351563 -12713.9677734375 -475.4585266113281 -12711.212890625 -478.2135925292969 C -12708.4580078125 -480.9685974121094 -12705.2490234375 -483.1318664550781 -12701.67578125 -484.6433410644531 C -12697.9775390625 -486.2079162597656 -12694.048828125 -487.0011901855469 -12689.9990234375 -487.0011901855469 L -12515.498046875 -487.0011901855469 L -12515.498046875 -240.9994354248047 L -12515.498046875 -240.9984436035156 Z">
 		</path>
 	</svg>
-	<div id="__bp">
-		<span>교복 마이</span>
-	</div>
 	<div id="__bq">
 		<span>교복 마이</span>
 	</div>
@@ -1173,9 +1212,6 @@
 	</div>
 	<div id="__bv">
 		<span>교복 마이</span>
-	</div>
-	<div id="ID20000">
-		<span>20,000</span><span style="font-size:10px;">원</span>
 	</div>
 	<div id="ID20000_bx">
 		<span>20,000</span><span style="font-size:10px;">원</span>
