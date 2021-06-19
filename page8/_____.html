@@ -14,6 +14,7 @@
 		font-weight: normal;
 		font-style: normal;
 	}
+	@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 	* {
 		margin: 0;
 		padding: 0;
@@ -98,8 +99,7 @@
 		height: 380px;
 		width: 790px;
 		border-radius: 35px;
-		/*background-color: rgba(242,197,61,1);*/
-		z-index: 100;
+		background-color: rgba(242,197,61,1);
 		filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.161));
 	}
 	.viewRegisterFONT{
@@ -110,20 +110,27 @@
 		font-size: 36px;
 		color: rgba(255,255,255,1);
 	}
-	#productSEC{
-		/* position left top은 나중에 지우기 */
+
+	.productSliderSEC{
 		position: absolute;
 		top: 90px;
 		left: 30px;
+		height: 250px;
+		width: 870px;
+	}
+	#productSEC{
+		cursor: pointer;
+		float: left;
 		width: 247px;
 		height: 247px;
+		margin-right: 19px;
 		border-radius: 30px;
 		background-color: rgb(255, 255, 255);
 		filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.161));
 	}
 	#productSEC:hover{
 		width: 230px;
-		height: 280px;
+		height: 275px;
 		border-radius: 30px 0px 0px 30px;
 	}
 	#productSEC:hover img{ width: 180px; }
@@ -142,6 +149,16 @@
 		width: 202px;
 		font-family: 'TmoneyRoundWind';
 		font-size: 14px;
+	}
+	.productNEXT {
+		cursor: pointer;
+		position: absolute;
+		right: 7px;
+		top: 90px;
+		width: 30px;
+		color: rgb(0, 0, 0);
+		transition: 0.6s ease;
+		border-radius: 0 3px 3px 0;
 	}
 	#_____ {
 		left: 413px;
@@ -1003,7 +1020,8 @@
 	}
 	#_16 {
 		fill: rgba(0,0,0,0);
-		stroke: rgba(242,197,61,1);
+		/*stroke: rgba(242,197,61,1);*/
+		stroke: rgb(0, 0, 0);
 		stroke-width: 2px;
 		stroke-linejoin: round;
 		stroke-linecap: round;
@@ -1015,7 +1033,7 @@
 		position: absolute;
 		width: 30px;
 		height: 66.002px;
-		left: 1508.998px;
+		left: 1630px;
 		top: 384.999px;
 		transform: matrix(1,0,0,1,0,0);
 	}
@@ -1157,13 +1175,36 @@
 	<!-- 등록글 -->
 	<div class="viewRegister">
 		<div class="viewRegisterFONT">등록글</div>
-		<div id="productSEC">
-			<img src="../img/noimage.PNG" id="productIMG">
-			<span id="productTITLE">교복 마이</span>
-			<span id="productPRICE" style="text-align: right;">20,000원</span>
+		<!-- 
+			마이페이지는 이미지 슬라이더에 제한이 없어서 무제한으로 해야해요.
+			<div class="slider">가 화면에 보이는거니까 그 안에 하면 될거에요.
+		 -->
+		<div class="productSliderSEC">
+			<div class="slider">
+				<div id="productSEC" onclick="location.href='#'">
+					<img src="../img/noimage.PNG" id="productIMG">
+					<span id="productTITLE">교복 마이</span>
+					<span id="productPRICE" style="text-align: right;">20,000원</span>
+				</div>
+				<div id="productSEC" onclick="location.href='#'">
+					<img src="../img/noimage.PNG" id="productIMG">
+					<span id="productTITLE">교복 마이</span>
+					<span id="productPRICE" style="text-align: right;">20,000원</span>
+				</div>
+				<div id="productSEC" onclick="location.href='#'">
+					<img src="../img/noimage.PNG" id="productIMG">
+					<span id="productTITLE">교복 마이</span>
+					<span id="productPRICE" style="text-align: right;">20,000원</span>
+				</div>
+			</div>
+			
+			<img src="../img/rightarrow.png" class="productNEXT" onclick="plusSlides(1)"/>
 		</div>
+		
 	</div>
 <div id="">
+
+
 	<svg class="_49">
 		<rect id="_49" rx="30" ry="30" x="0" y="0" width="1194" height="378">
 		</rect>
@@ -1175,10 +1216,7 @@
 		<rect id="_53" rx="30" ry="30" x="0" y="0" width="246" height="246">
 		</rect>
 	</svg>
-	<svg class="_46">
-		<rect id="_46" rx="30" ry="30" x="0" y="0" width="246" height="246">
-		</rect>
-	</svg>
+	
 	<svg class="_50">
 		<rect id="_50" rx="30" ry="30" x="0" y="0" width="246" height="246">
 		</rect>
@@ -1191,14 +1229,7 @@
 		<rect id="_55" rx="30" ry="30" x="0" y="0" width="246" height="246">
 		</rect>
 	</svg>
-	<svg class="_4" viewBox="-12720 -487.001 204.502 246.003">
-		<path id="_4" d="M -12515.498046875 -240.9984436035156 L -12515.498046875 -240.9994049072266 L -12689.9990234375 -240.9994049072266 C -12694.048828125 -240.9994049072266 -12697.9775390625 -241.7926940917969 -12701.67578125 -243.3572540283203 C -12705.25 -244.8688201904297 -12708.4580078125 -247.0321044921875 -12711.212890625 -249.7870330810547 C -12713.9677734375 -252.5420989990234 -12716.130859375 -255.7505340576172 -12717.642578125 -259.3233032226563 C -12719.20703125 -263.0216064453125 -12720 -266.950439453125 -12720 -271.0006713867188 L -12720 -456.9999694824219 C -12720 -461.0502319335938 -12719.20703125 -464.9790344238281 -12717.642578125 -468.6772766113281 C -12716.130859375 -472.2500610351563 -12713.9677734375 -475.4585266113281 -12711.212890625 -478.2135925292969 C -12708.4580078125 -480.9685974121094 -12705.2490234375 -483.1318664550781 -12701.67578125 -484.6433410644531 C -12697.9775390625 -486.2079162597656 -12694.048828125 -487.0011901855469 -12689.9990234375 -487.0011901855469 L -12515.498046875 -487.0011901855469 L -12515.498046875 -240.9994354248047 L -12515.498046875 -240.9984436035156 Z">
-		</path>
-	</svg>
 	<div id="__bq">
-		<span>교복 마이</span>
-	</div>
-	<div id="__br">
 		<span>교복 마이</span>
 	</div>
 	<div id="__bs">
@@ -1210,13 +1241,7 @@
 	<div id="__bu">
 		<span>교복 마이</span>
 	</div>
-	<div id="__bv">
-		<span>교복 마이</span>
-	</div>
 	<div id="ID20000_bx">
-		<span>20,000</span><span style="font-size:10px;">원</span>
-	</div>
-	<div id="ID20000_by">
 		<span>20,000</span><span style="font-size:10px;">원</span>
 	</div>
 	<div id="ID20000_bz">
@@ -1228,30 +1253,12 @@
 	<div id="ID20000_ca">
 		<span>20,000</span><span style="font-size:10px;">원</span>
 	</div>
-	<div id="_21">
-		<svg class="_18">
-			<rect id="_18" rx="0" ry="0" x="0" y="0" width="202" height="170">
-			</rect>
-		</svg>
-		<div id="No_Image">
-			<span>No Image</span>
-		</div>
-	</div>
 	<div id="_63">
 		<svg class="_18_b">
 			<rect id="_18_b" rx="0" ry="0" x="0" y="0" width="202" height="170">
 			</rect>
 		</svg>
 		<div id="No_Image_b">
-			<span>No Image</span>
-		</div>
-	</div>
-	<div id="_59">
-		<svg class="_18_ca">
-			<rect id="_18_ca" rx="0" ry="0" x="0" y="0" width="202" height="170">
-			</rect>
-		</svg>
-		<div id="No_Image_ca">
 			<span>No Image</span>
 		</div>
 	</div>
@@ -1282,19 +1289,6 @@
 			<span>No Image</span>
 		</div>
 	</div>
-	<div id="_60">
-		<svg class="_18_cl">
-			<rect id="_18_cl" rx="0" ry="0" x="0" y="0" width="180" height="170">
-			</rect>
-		</svg>
-		<div id="No_Image_cm">
-			<span>No Image</span>
-		</div>
-	</div>
-	<svg class="_16" viewBox="-12720 -522.002 28.001 64.002">
-		<path id="_16" d="M -12691.9990234375 -490.0004577636719 L -12720 -457.9993286132813 L -12691.9990234375 -490.0004577636719 Z M -12720 -522.0015869140625 L -12691.9990234375 -490.0004577636719 L -12720 -522.0015869140625 Z">
-		</path>
-	</svg>
 	<svg class="_17" viewBox="-12720 -522.002 28.001 64.002">
 		<path id="_17" d="M -12691.9990234375 -490.0004577636719 L -12720 -457.9993286132813 L -12691.9990234375 -490.0004577636719 Z M -12720 -522.0015869140625 L -12691.9990234375 -490.0004577636719 L -12720 -522.0015869140625 Z">
 		</path>
