@@ -10,6 +10,14 @@ function addIMG(event) {
     reader.readAsDataURL(inputfile); 
 }
 
+// 사용자 이름 글자수 제한
+function limitUser(e, max){
+    if(e.value.length > max){
+        alert("최대 " + max + "글자까지 입니다.")
+        e.value = e.value.slice(0, max)
+    }
+}
+
 // 슬라이드
 function plusSlides(n, order) {
     showSlides(slideIndex += n, order);
