@@ -36,6 +36,14 @@
 	top: 35px;
 	overflow: visible;
 }
+#topUSER{
+	position: absolute;
+	top: 40px;
+	right: 300px;
+	float: right;
+	font-family: 'TmoneyRoundWind';
+	font-size: 23px;
+}
 #topMY {
 	fill: transparent;
 	stroke: rgba(26,24,24,1);
